@@ -1,7 +1,6 @@
 
 
 ### ERD Relationships
-![alt text](erd.JPG)
 
 #### Tables
 ----
