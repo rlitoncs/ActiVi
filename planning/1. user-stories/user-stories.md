@@ -2,7 +2,7 @@
 
 ### User
 ----
-###### Profile
+#### Profile
 
 1. As a user, I want to be able to **create an account and verify it with a verfication code**
 2. As a user, I want to be able to **login/logout**
@@ -10,7 +10,7 @@
 4. As a user, I want to be able to **view my profile picture**
 5. As a user, I want to be able to **view my profile information (age, height, weight) when I click on my profile picture**
 
-###### Workouts
+#### Workouts
 6. As a user, I want to be able to **visually track my progress**
 7. As a user, I want to be able to **add new workouts**
 8. As a user, I want to be able to **edit and delete my existing workouts**
@@ -23,21 +23,21 @@
 15. As a user, I want to be able to **set my duration of the workout**
 16. As a user, I want to be able to **see calories burned from a workout**
 
-######  Goals
+####  Goals
 17. As a user, I want to be able to **add a new fitness goal**
 18. As a user, I want to be able to **edit and delete my existing fitness goals**
 19. As a user, I want to **see suggested goals**
 
-###### Motivational Messages
+#### Motivational Messages
 20. As a user, I want to **feel motivated and inspired**
 
-###### FAQ
+#### FAQ
 21. As a user, I **want to be able to see FAQ**
 
 
 ### Stretch User Stories
 ----
-###### User Accounts:
+#### User Accounts:
 1. As a user, I want to be able to **see any upcoming activties/tasks**
 2. As a user, I want to be able to **be reminded about any upcoming activities/tasks**
 3. As a user, I want to be able to **post achievements**
@@ -46,7 +46,7 @@
 6. As a user, I want to be able to **comment on users achievements/thoughts/pictures**
 7. As a user, I want to be able to **follow other people**
 
-###### ActiVi Premium:
+#### ActiVi Premium:
 1. As a user, I want to be able to **join the premium club**
 2. As a user, I want to be able to **create a team**
 3. As a user, I want to be able to **join a team**
@@ -57,5 +57,5 @@
 8. As a user, I want to **create fitness challenges**
 
 
-###### AI
+#### AI
 1. As a user, I want to be able to **use a bot like ChatGPT to ask questions**
