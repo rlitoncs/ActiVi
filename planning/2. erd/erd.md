@@ -1,51 +1,61 @@
 
 
 ### ERD Relationships
+![alt text](erd.JPG)
 
 #### Tables
 ----
- * Users, User_Workouts, User_Goals, Workout_Types, Activities, MuscleGroups, ActivityRecommendations, AgeGroups, FAQ
+ * Users
+ * User_Workouts
+ * User_Goals
+ * Workout_Types
+ * Activities
+ * MuscleGroups
+ * ActivityRecommendations
+ * AgeGroups
+ * MotivationalMessages
+ * FAQ
 
-##### Users <> Workouts
 ----
+#### Users <> Workouts
  * *A user can have multiple workouts (**1-to-N**)*
-
-###### Users <> Goals
 ----
+
+#### Users <> Goals
  * *A user can have multiple goals (**1-to-N**)*
-
-###### User_Workouts <> Workout_Types
 ----
+
+#### User_Workouts <> Workout_Types
  * *many workouts can be categorized under a workout type (**N-to-1**)*
-
-######  User_Workouts <> Activities
 ----
+
+####  User_Workouts <> Activities
  * *many workouts corresponds to a specific activity (**N-to-1**)*
-
-######  Workout_Types <> Activities
 ----
+
+####  Workout_Types <> Activities
   * *a workout type has multiple activities, and each activity belongs to one workout type (**1-to-N**)*
-
-###### Workout_Types <> ActivityRecommendations
 ----
+
+#### Workout_Types <> ActivityRecommendations
   * *a workout type can have multiple activity recommendations (**1-to-N**)*
-
-###### Activities <> Activity Recommendations
 ----
+
+#### Activities <> Activity Recommendations
   * *an activity has many activity recommendations (**1-to-N**)*
-
-######  Activities <> MuscleGroups
 ----
+
+####  Activities <> MuscleGroups
   * *multiple activities belong to a muscle group, and a muscle group has many activties (**N-to-1**)*
-
-###### AgeGroups <> ActivityRecommendations
 ----
+
+#### AgeGroups <> ActivityRecommendations
   * *an age group can have multiple activity recommendations (**1-to-N**)*
-
-###### MotivationalMessages
 ----
+
+#### MotivationalMessages
   * *no relationship type*
-
-###### FAQ
 ----
+
+#### FAQ
   * *no relationship type*
