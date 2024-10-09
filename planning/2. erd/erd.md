@@ -2,6 +2,8 @@
 
 ### ERD Relationships
 
+![ERD Diagram](https://github.com/user-attachments/assets/053e4aa8-994d-405f-878a-19fc602835b2)
+
 #### Tables
 ----
  * Users
