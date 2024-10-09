@@ -1,5 +1,5 @@
-### User Stories:
 ![ERD](https://github.com/rlitoncs/ActiVi/blob/main/planning/2.%20erd/erd.md)
+### User Stories:
 
 ### User
 ----
