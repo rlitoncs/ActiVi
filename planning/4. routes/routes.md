@@ -5,103 +5,67 @@ Remember RESTful conventions (they make it much easier)*
 
 ```
 Users
---------------------------------------
-Browse         GET           api/users                              
-Read           GET           api/users/:id                          
-Edit           GET           api/users/:id/edit                 
-               POST          api/users/:id                        
-Add            GET           api/users/new                                                                                     
-               POST          api/users                                     
-Delete         POST          api/users/:id/delete            
-
+--------------------------------------                         
+Read           GET           api/users/:id                Show specific user
+Edit           POST          api/users/:id                Handle submission of edit post form for specific user
+Add            POST          api/users                    Handle new submission of new product into products database 
+Delete         POST          api/users/:id/delete         Handle delete user form submission
 
 
 User_Workouts
 ----------------------------------------
-Browse         GET           api/workouts                           
-Read           GET           api/workouts/:id                    
-Edit           GET           api/workouts/:id/edit                                                                
-               POST          api/workouts/:id                    
-Add            GET           api/workouts/new                                                                                          
-               POST          api/workouts                           
-Delete         POST          api/workouts/:id/delete    
+Browse         GET           api/workouts                 Show all workouts
+Read           GET           api/workouts/:id             Show specific workout
+Edit           POST          api/workouts/:id             Handle submission of edit post form for specific user
+Add            POST          api/workouts                 Handle new submission of new user workout into users database
+Delete         POST          api/workouts/:id/delete      Handle delete workout form submission
 
 
 Workout_Types
 ----------------------------------------
-Browse         GET           api/workouts-types                           
-Read           GET           api/workouts-types/:id                    
-Edit           GET           api/workouts-types/:id/edit                                                                
-               POST          api/workouts-types/:id                    
-Add            GET           api/workouts-types/new                                                                                          
-               POST          api/workouts-types                           
-Delete         POST          api/workouts-types/:id/delete    
+Browse         GET           api/workouts-types          Show all workout-types
+Read           GET           api/workouts-types/:id      Show specific workout-type
 
 
 Activities
 ----------------------------------------
-Browse         GET           api/activities                           
-Read           GET           api/activities/:id                    
-Edit           GET           api/activities/:id/edit                                                                
-               POST          api/activities/:id                    
-Add            GET           api/activities/new                                                                                          
-               POST          api/activities                           
-Delete         POST          api/activities/:id/delete    
+Browse         GET           api/activities              Show all activities
+Read           GET           api/activities/:id          Show specific activity
 
 
 Muscle_groups
 ----------------------------------------
-Browse         GET           api/musclegroups                           
-Read           GET           api/musclegroups/:id                    
-Edit           GET           api/musclegroups/:id/edit                                                                
-               POST          api/musclegroups/:id                    
-Add            GET           api/musclegroups/new                                                                                          
-               POST          api/musclegroups                           
-Delete         POST          api/musclegroups/:id/delete    
+Browse         GET           api/musclegroups            Show all muscle groups
+Read           GET           api/musclegroups/:id        Show specific muscle group
 
 
 Activity_Recommendations
 ----------------------------------------
-Browse         GET           api/activity-recommendations                           
-Read           GET           api/activity-recommendations/:id                    
-Edit           GET           api/activity-recommendations/:id/edit                                                                
-               POST          api/activity-recommendations/:id                    
-Add            GET           api/activity-recommendations/new                                                                                          
-               POST          api/activity-recommendations                           
-Delete         POST          api/activity-recommendations/:id/delete    
+Browse         GET           api/activity-recommendations           Show all acitivity recommendations
+Read           GET           api/activity-recommendations/:id       Show specific acitivity recommendation
 
-Goals
+
+User_Goals
 ----------------------------------------
-Browse         GET           api/goals                                  
-Read           GET           api/goals/:id                            
-Edit           GET           api/goals/:id/edit                   
-               POST          api/goals/:id                          
-Add            GET           api/goals/new                                                                      
-               POST          api/goals                                            
-Delete         POST          api /goals/:id/delete
+Browse         GET           api/goals                    Show all user goals
+Read           GET           api/goals/:id                Show specific user goal
+Edit           POST          api/goals/:id                Handle submission of edit post form for specific goal
+Add            POST          api/goals                    Handle new submission of new user goal into user_goals database
+Delete         POST          api /goals/:id/delete        Handle delete user goal form submission
 
 
 
 MotivationalMessages
 --------------------------------------
-Browse         GET           api/motivations                      
-Read           GET           api/motivations/:id                          
-Edit           GET           api/motivations/:id/edit                 
-               POST          api/motivations/:id                        
-Add            GET           api /motivations/new                                                                                     
-               POST          api/motivations
-Delete         POST          api/motivations/:id/delete         
+Browse         GET           api/motivations              Show all motivational messages
+Read           GET           api/motivations/:id          Show specific motivational message
 
 
 
 FAQS
 --------------------------------------
-Browse         GET           api/faqs
-Read           GET           api/faqs/:id                          
-Edit           GET           api/faqs/:id/edit                 
-               POST          api/faqs/:id                        
-Add            GET           api/faqs/new                                                                                     
-               POST         api/faqs
-Delete         POST         api/faqs/:id/delete     
+Browse         GET           api/faqs                     Show all faqs
+Read           GET           api/faqs/:id                 Show specific faq
+
 ```
 
