@@ -1,3 +1,5 @@
+
+![MVP/MVD](https://github.com/rlitoncs/ActiVi/blob/main/planning/4.%20mvp-mvd/mvp-mvd.md)
 ## Routes
 
 *Once you know the resources that you'll have, write out the routes that you'll need to perform BREAD operations on those resources

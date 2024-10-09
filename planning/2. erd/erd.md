@@ -1,5 +1,5 @@
 
-
+![Routes](https://github.com/rlitoncs/ActiVi/blob/main/planning/3.%20routes/routes.md)
 ### ERD Relationships
 
 ![ERD Diagram](https://github.com/user-attachments/assets/053e4aa8-994d-405f-878a-19fc602835b2)
