@@ -58,3 +58,5 @@ Read           GET           api/musclegroups/:id        Show specific muscle gr
   * Goals
   * FAQ
 
+# MVP-MVD ERD
+![MVP-MVD-ERD](https://github.com/rlitoncs/ActiVi/blob/main/planning/4.%20mvp-mvd/mvp-mvd-erd.png)
