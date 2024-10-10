@@ -12,7 +12,7 @@
 4. As a user, I want to be able to **view my profile picture**
 5. As a user, I want to be able to **view my profile information (age, height, weight) when I click on my profile picture**
 
-#### Workouts
+#### Exercises/Workouts
 6. As a user, I want to be able to **visually track my progress**
 7. As a user, I want to be able to **add new workouts**
 8. As a user, I want to be able to **edit and delete my existing workouts**
