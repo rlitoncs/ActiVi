@@ -46,3 +46,15 @@ Browse         GET           api/musclegroups            Show all muscle groups
 Read           GET           api/musclegroups/:id        Show specific muscle group
 
 ```
+
+
+# MVP-MVD
+  * Primary Focus:
+    * User Setup
+    * Main Dashboard
+    * Workouts
+
+# Beyond MVP-MVD
+  * Goals
+  * FAQ
+
