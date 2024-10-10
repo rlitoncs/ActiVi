@@ -10,7 +10,7 @@
 2. As a user, I want to be able to **login/logout**
 3. As a user, I want to be able to **add a profile picture**
 4. As a user, I want to be able to **view my profile picture**
-5. As a user, I want to be able to **view my profile information (age, height, weight) when I click on my profile picture**
+5. As a user, I want to be able to **view my profile information (age, height, weight)**
 
 #### Exercises/Workouts
 6. As a user, I want to be able to **visually track my progress**
