@@ -9,5 +9,11 @@
 ### Exercises Page
 ![Exercises](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/exercises.png)
 
+### Exercise Selection (Light)
+![Exercise-Selection-Light]()
+
+### Exercise Page (Dark)
+![Exercise-Selection-Dark]()
+
 ### Goals Page
 ![Goals](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/goalspng.png)
