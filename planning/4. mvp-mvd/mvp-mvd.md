@@ -32,6 +32,9 @@ Read           GET           api/workouts-types/:id      Show specific workout-t
 
 ```
 
+![MVP-MVD](https://github.com/rlitoncs/ActiVi/blob/main/planning/2.%20erd/erd-update(2.0).png?raw=true)
+
+
 
 # MVP-MVD
   * Primary Focus:

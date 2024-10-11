@@ -4,16 +4,13 @@
 ## Wireframes
 
 ### Dashboard Page
-![Dashboard](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/dashboard.png)
+![Dashboard](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/Dashboard-Page.JPG?raw=true)
 
 ### Exercises Page
-![Exercises](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/exercises.png)
+![Exercises](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/Exercises-Page.JPG?raw=true)
 
-### Exercise Selection (Light)
-![Exercise-Selection-Light](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/exercise-selection-light.png?raw=true)
+### Exercise Modal (Light)
+![Exercise-Selection-Light](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/Exercises-Page-Modal(Light).JPG?raw=true)
 
-### Exercise Page (Dark)
-![Exercise-Selection-Dark](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/exercise-selection-dark.png?raw=true)
-
-### Goals Page
-![Goals](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/goalspng.png)
+### Exercise Modal (Dark)
+![Exercise-Selection-Dark](https://github.com/rlitoncs/ActiVi/blob/main/planning/5.%20wireframes/Exercises-Page-Modal(Dark).JPG?raw=true)
