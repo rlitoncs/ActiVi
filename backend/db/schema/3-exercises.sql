@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS Exercises;
 CREATE TABLE Exercises (
     id SERIAL PRIMARY KEY NOT NULL,
     exercise_name VARCHAR(255),
+    description TEXT,
     equipment VARCHAR(255),
     photo_url TEXT,
     video_url TEXT,
