@@ -1,0 +1,41 @@
+.nav-menu-items {
+  .ant-menu{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 15px;
+    font-size: 1rem;
+    position: relative;
+    background: #EB8C34;
+
+    .ant-menu-item.dashboard-menu-item:hover,
+    .ant-menu-item.exercise-menu-item:hover, 
+    .ant-menu-item.logout-menu-item:hover,
+    .ant-menu-item.faq-menu-item:hover {
+      background:#001529;
+      color:white;
+    }
+    .ant-menu-item-selected{
+      background-color:#001529;
+      color: white;
+  
+      .ant-menu-title-content, .anticon{
+        color: white;
+      }
+    }
+    
+    .ant-menu-item.logout-menu-item {
+      margin-top: auto;
+    }
+  }
+  
+  .toggle{
+    display:flex;
+    justify-content:space-around;
+    align-items: flex-end;
+    flex: 0;
+    margin-bottom: 20px;
+  }
+  
+
+}
