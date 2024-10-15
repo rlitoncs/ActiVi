@@ -1,18 +1,14 @@
+import '../../styles/navigation/Layout.scss';
+import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <>
-      {/*Navbar */}
-      <h1> this is our navbar </h1>
+    <div className={"main-container"}>
+      <Sidebar />
+      <Outlet />
+    </div>
 
-      {/* Placeholder for children components */}
-      <Outlet/> 
-
-      {/* Footer */}
-      <h1> footer </h1>
-    </>
   )
 }
-
 export default Layout;
