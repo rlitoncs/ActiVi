@@ -4,11 +4,13 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className={"main-container"}>
-      <Sidebar />
-      <Outlet />
+    <div className="main-container">
+      <Sidebar className="sidebar" />
+      <div className="content-area">
+        <Outlet />
+      </div>
     </div>
+  );
+};
 
-  )
-}
 export default Layout;

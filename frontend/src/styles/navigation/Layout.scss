@@ -1,4 +1,8 @@
-.main-container{
-  display:flex;
+.main-container {
+  display: flex;
   flex-direction: row;
+}
+
+.content-area {
+  flex-grow: 1; // Fills the remaining width
 }
