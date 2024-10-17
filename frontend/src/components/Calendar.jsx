@@ -5,11 +5,11 @@ import { useState }  from 'react';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { useCalendar } from '../providers/CalendarProvider';
 
 
 const Calendar = () => {
-  const [selectedDate, setSelectedDate] = useState(dayjs());
-
+  const {selectedDate, setSelectedDate} = useCalendar(); 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DatePicker
