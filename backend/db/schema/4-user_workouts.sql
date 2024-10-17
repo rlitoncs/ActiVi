@@ -7,6 +7,7 @@ CREATE TABLE User_Workouts (
     is_completed BOOLEAN,
     sets INT,
     reps INT,
+    weight INT,
     exercise_id INT REFERENCES Exercises(id) ON DELETE CASCADE,
     user_id INT REFERENCES Users(id) ON DELETE CASCADE
 );
