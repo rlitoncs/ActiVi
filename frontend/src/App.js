@@ -5,8 +5,10 @@ import Layout from './components/navigation/Layout';
 import Exercises from './components/pages/Exercises';
 import Dashboard from './components/pages/Dashboard';
 import FAQ from './components/beyondMVP/FAQ';
+import ExerciseModal from './components/pages/ExerciseModal';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/exercises",
         element: <Exercises />
+      },
+      {
+         path: "/exercise-modal",
+         element: <ExerciseModal />
       },
       {
         path: "/faq",
