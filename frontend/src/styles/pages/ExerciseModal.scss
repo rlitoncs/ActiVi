@@ -1,14 +1,32 @@
 .exercise-modal-container{
-justify-content: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
+.exercise-modal_description, exercise-modal_exercises, .exercise-modal_equipment, .exercise-modal_video_url{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
 }
 
 .exercise-modal_close-button{
-
-}
-
-.exercise-modal_exercises{
-
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .exercise-modal_muscle_group{
@@ -29,13 +47,3 @@ justify-content: flex-end;
 .exercise-modal_muscle_group:hover{
   opacity: 1;
 }
-
-
-.exercise-modal_photo_url{
-
-}
-
-.exercise-modal_description, .exercise-modal_equipment{
-
-}
-
