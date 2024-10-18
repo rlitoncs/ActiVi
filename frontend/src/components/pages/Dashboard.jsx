@@ -1,10 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CalendarProvider from '../../providers/CalendarProvider';
 import '../../styles/pages/Dashboard.scss'
+import CalendarProvider from '../../providers/CalendarProvider';
 import Calendar from '../Calendar';
 import WorkoutList from '../WorkoutList';
+import useEdit from '../../hooks/useEdit';
+import EditModalWorkout from '../EditModalWorkout'
 
 const Dashboard = () => {
+  const { displayModal, workout, status, submit, editWorkout, closeEditWorkout, handleChange,
+    handleSubmit } = useEdit();
+
   return(
     <div className='dashboard-container'>
       <CalendarProvider>
@@ -19,7 +24,10 @@ const Dashboard = () => {
       </div>
 
       <div className='section-workouts-list'>
-          <WorkoutList />
+        <WorkoutList editWorkout={editWorkout} submit={submit}/>
+        {displayModal &&
+          <EditModalWorkout workout={workout} status={status} closeEditWorkout={closeEditWorkout} handleChange={handleChange} handleSubmit={handleSubmit}/>
+        }
       </div>
       </CalendarProvider>
     </div>
