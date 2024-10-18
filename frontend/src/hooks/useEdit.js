@@ -12,7 +12,6 @@ const useEdit = () => {
   const [submit, setSubmit] = useState(false);
 
   const [formData, setFormData] = useState({});
-  console.log(formData);
 
   useEffect(() => {
     if (submit) {
@@ -28,9 +27,7 @@ const useEdit = () => {
     }
     }, [submit])
     
-
-
-
+    
   // Helper functions
   const editWorkout = (workout) => {
     setDisplayModal(!displayModal);
