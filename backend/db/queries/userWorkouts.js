@@ -60,4 +60,9 @@ const updateUserWorkoutData = (workout_id , editData) => {
   });
 }
 
-module.exports = { getUserWorkoutData, updateUserWorkoutData };
+const deleteUserWorkout = (workout_id) => {
+  return db.query(`DELETE from user_workouts WHERE id = ${workout_id};`)
+    .then(() => "Successfully deleted workout")
+}
+
+module.exports = { getUserWorkoutData, updateUserWorkoutData, deleteUserWorkout };
