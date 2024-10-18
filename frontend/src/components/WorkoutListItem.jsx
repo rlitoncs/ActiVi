@@ -3,29 +3,42 @@ import LocalFireDepartmentOutlinedIcon from '@mui/icons-material/LocalFireDepart
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import NumbersOutlinedIcon from '@mui/icons-material/NumbersOutlined';
 import FitnessCenterOutlinedIcon from '@mui/icons-material/FitnessCenterOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
-const WorkoutListItem = ({ duration, calories_burned, is_completed, sets, reps, weight, exercise_name, muscle_group}) => {
+const WorkoutListItem = (props) => {
+
   return (
-    <div className="workout-list-item">
-      <div className="workout-list-title">
-        {exercise_name}
+    <div className="workout-list-item" onClick={() => props.editWorkout(props) }>
+      <div className="workout-list-header">
+        <div className="workout-list-title">
+          {props.exercise_name}
+        </div>
+        <div className='workout-list-buttons'> 
+          <div className='workout-list-edit' onClick={() => props.editWorkout(props) }>
+            <EditOutlinedIcon />
+          </div> 
+          <div className='workout-list-delete'>
+            <DeleteOutlineOutlinedIcon />
+          </div>
+        </div>
       </div>
       <div className='workout-list-details'>
         <div className='workout-list-muscle-group'>
-          {muscle_group}
+          {props.muscle_group}
         </div>
         <div className="workout-list-sets-reps">
-          <NumbersOutlinedIcon/> {sets} sets x {reps} reps
+          <NumbersOutlinedIcon/> {props.sets} sets x {props.reps} reps
         </div>
         <div className="workout-list-weight">
-          <FitnessCenterOutlinedIcon/> {weight} lbs
+          <FitnessCenterOutlinedIcon/> {props.weight} lbs
         </div>
         <div className="workout-list-metrics">
           <div className="workout-list-calories">
-            <LocalFireDepartmentOutlinedIcon/> {calories_burned} calories
+            <LocalFireDepartmentOutlinedIcon/> {props.calories_burned} calories
           </div>
           <div className='workout-list-duration'>
-            <AccessTimeOutlinedIcon/> {duration} minutes
+            <AccessTimeOutlinedIcon/> {props.duration} minutes
           </div>
         </div>
 
