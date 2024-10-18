@@ -24,4 +24,14 @@ router.post('/:id', (req,res) => {
 
 })
 
+router.post('/delete/:id', (req, res) => {
+  const { id } = req.params;
+
+  userWorkoutsQueries.deleteUserWorkout(id)
+    .then(() => {
+      res.sendStatus(200);
+    })
+
+})
+
 module.exports = router; 
