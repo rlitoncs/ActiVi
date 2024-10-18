@@ -3,7 +3,6 @@ const router = express.Router();
 const userWorkoutsQueries = require('../db/queries/userWorkouts');
 
 // GET /api/userWorkouts/[:date]
-
 router.get('/:date', (req, res) => {
   const { date } = req.params;
 
@@ -13,5 +12,16 @@ router.get('/:date', (req, res) => {
     })
 })
 
+// GET /api/userWorkouts/[:id]
+router.post('/:id', (req,res) => {
+  const { id } = req.params;
+  const { formData } = req.body;
+
+  userWorkoutsQueries.updateUserWorkoutData(id, formData)
+    .then(() => {
+      res.sendStatus(200);
+    })
+
+})
 
 module.exports = router; 
