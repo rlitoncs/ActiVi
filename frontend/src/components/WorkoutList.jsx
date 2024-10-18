@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import { useCalendar } from "../providers/CalendarProvider";
 
 
-const WorkoutList = ({editWorkout, submit}) => {
+const WorkoutList = ({editWorkout, deleteWorkout, submit, submitDelete}) => {
   const { selectedDate } = useCalendar(); 
   const [workouts, setWorkouts] = useState([]);
 
@@ -26,7 +26,7 @@ const WorkoutList = ({editWorkout, submit}) => {
         console.log(error);
       })
 
-  }, [selectedDate, submit])
+  }, [selectedDate, submit, submitDelete])
 
 
   return (
@@ -47,6 +47,7 @@ const WorkoutList = ({editWorkout, submit}) => {
                     exercise_name={workout.exercise_name}
                     muscle_group={workout.muscle_group}
                     editWorkout={editWorkout}
+                    deleteWorkout={deleteWorkout}
                 />
               </Col>
             )
