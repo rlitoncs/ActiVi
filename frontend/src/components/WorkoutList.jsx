@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import { useCalendar } from "../providers/CalendarProvider";
 
 
-const WorkoutList = () => {
+const WorkoutList = ({editWorkout, submit}) => {
   const { selectedDate } = useCalendar(); 
   const [workouts, setWorkouts] = useState([]);
 
@@ -20,38 +20,39 @@ const WorkoutList = () => {
   useEffect(() => {
     axios.get(`/api/userWorkouts/${dateQuery}`)
       .then(response => {
-        console.log(response.data);
         setWorkouts(response.data);
       })
       .catch(error => {
         console.log(error);
       })
 
-  }, [selectedDate])
+  }, [selectedDate, submit])
 
 
   return (
-    <ul className="workouts-list">
-      <Row>
-        {workouts.map(workout => {
-          return (
-          <Col xs={12} md={4}>
-            <WorkoutListItem 
-                key={workout.id}
-                duration={workout.duration}
-                calories_burned={workout.calories_burned}
-                is_completed={workout.is_completed}
-                sets={workout.sets}
-                reps={workout.reps}
-                weight={workout.weight}
-                exercise_name={workout.exercise_name}
-                muscle_group={workout.muscle_group}
-            />
-          </Col>
-          )
-        })}
-      </Row>
-    </ul>
+      <ul className="workouts-list">
+        <Row>
+          {workouts.map(workout => {
+            return (
+              <Col xs={12} md={4}>
+                <WorkoutListItem 
+                    key={workout.id}
+                    id={workout.id}
+                    duration={workout.duration}
+                    calories_burned={workout.calories_burned}
+                    is_completed={workout.is_completed}
+                    sets={workout.sets}
+                    reps={workout.reps}
+                    weight={workout.weight}
+                    exercise_name={workout.exercise_name}
+                    muscle_group={workout.muscle_group}
+                    editWorkout={editWorkout}
+                />
+              </Col>
+            )
+          })}
+        </Row>
+      </ul>
   )
 }
 
