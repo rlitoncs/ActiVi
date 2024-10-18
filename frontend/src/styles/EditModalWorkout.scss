@@ -1,0 +1,72 @@
+// Modal Container
+.edit-details-modal {
+  background-color: white;
+  box-shadow: 0 0 0 50vmax rgba(0,0,0,.5);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  height: 50%;
+  width: 40%;
+  overflow-y: scroll;
+  border-radius: 12px;
+}
+
+.edit-details-modal-close{
+  cursor:pointer;
+
+  .MuiSvgIcon-root{
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+// Title
+.edit-title-modal {
+  color: #EB8C34;
+  font-size: 36px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+// Form
+.edit-form-modal{
+  .MuiFormControl-root{
+    width: 100%;
+  }
+
+  h4 {
+    color: #EB8C34;
+    padding-left: 25px;
+    padding-bottom: 5px;
+  }
+
+  .edit-form-sets-reps, 
+  .edit-form-weight, 
+  .edit-form-calories, 
+  .edit-form-duration{
+    padding: 0 25px;
+    padding-bottom: 25px;
+    margin-top:10px;
+  }
+
+  .edit-form-sets-reps {
+    display: flex;
+  }
+
+   .edit-form-sets{
+    padding-right: 10px;
+  }
+
+  .edit-form-button, .edit-form-error {
+    margin-left:25px;
+  }
+
+  .edit-form-error{
+    font-style: italic;
+    color: red;
+  }
+
+}
