@@ -9,7 +9,7 @@ import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined
 const WorkoutListItem = (props) => {
 
   return (
-    <div className="workout-list-item" onClick={() => props.editWorkout(props) }>
+    <div className="workout-list-item">
       <div className="workout-list-header">
         <div className="workout-list-title">
           {props.exercise_name}
@@ -18,7 +18,7 @@ const WorkoutListItem = (props) => {
           <div className='workout-list-edit' onClick={() => props.editWorkout(props) }>
             <EditOutlinedIcon />
           </div> 
-          <div className='workout-list-delete'>
+          <div className='workout-list-delete' onClick={() => props.deleteWorkout(props.id) }>
             <DeleteOutlineOutlinedIcon />
           </div>
         </div>
