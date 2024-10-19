@@ -3,11 +3,12 @@ import WorkoutListItem from "./WorkoutListItem";
 import { Row, Col } from 'react-bootstrap';
 import { useState, useEffect } from "react"
 import { useCalendar } from "../providers/CalendarProvider";
+import TotalWorkouts from "./TotalWorkouts";
 
 
 const WorkoutList = ({editWorkout, deleteWorkout, submit, submitDelete}) => {
   const { selectedDate } = useCalendar(); 
-  const [workouts, setWorkouts] = useState([]);
+  const [workouts, setWorkouts] = useState({ userWorkouts: [], totalWorkouts: 0 });
 
   const date = {
     year: selectedDate["$y"],
@@ -20,7 +21,7 @@ const WorkoutList = ({editWorkout, deleteWorkout, submit, submitDelete}) => {
   useEffect(() => {
     axios.get(`/api/userWorkouts/${dateQuery}`)
       .then(response => {
-        setWorkouts(response.data);
+        setWorkouts(response.data); // data comes back as { userWorkouts[{}], totalWorkouts[{}] }
       })
       .catch(error => {
         console.log(error);
@@ -32,7 +33,9 @@ const WorkoutList = ({editWorkout, deleteWorkout, submit, submitDelete}) => {
   return (
       <ul className="workouts-list">
         <Row>
-          {workouts.map(workout => {
+          {
+          workouts.userWorkouts.length > 0 &&
+          workouts.userWorkouts.map(workout => {
             return (
               <Col xs={12} md={4}>
                 <WorkoutListItem 
@@ -52,6 +55,9 @@ const WorkoutList = ({editWorkout, deleteWorkout, submit, submitDelete}) => {
               </Col>
             )
           })}
+        </Row>
+        <Row>
+          <TotalWorkouts count={workouts.totalWorkouts}/>
         </Row>
       </ul>
   )
