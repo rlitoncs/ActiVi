@@ -1,8 +1,10 @@
 .main-container {
   display: flex;
   flex-direction: row;
+  height: 100vh; 
 }
 
 .content-area {
-  flex-grow: 1; // Fills the remaining width
+  flex-grow: 1;
+  overflow-y: auto;
 }
