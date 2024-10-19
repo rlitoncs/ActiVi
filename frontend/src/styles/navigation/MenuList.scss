@@ -8,16 +8,37 @@
     position: relative;
     background: #EB8C34;
 
+    
+    .ant-menu-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      
+      .anticon, .MuiSvgIcon-root {
+        font-size: 25px;
+      }
+      .ant-menu-title-content{
+        margin-inline-start:0;
+      }
+    }
+    .ant-menu-item.dashboard-menu-item,
+    .ant-menu-item.exercise-menu-item,
+    .ant-menu-item.faq-menu-item {
+      position: relative;
+      top: 18vh;
+    }
     .ant-menu-item.dashboard-menu-item:hover,
     .ant-menu-item.exercise-menu-item:hover, 
     .ant-menu-item.logout-menu-item:hover,
     .ant-menu-item.faq-menu-item:hover {
       background:#001529;
       color:white;
+      
     }
     .ant-menu-item-selected{
       background-color:#001529;
-      color: white;
   
       .ant-menu-title-content, .anticon{
         color: white;
