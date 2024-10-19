@@ -9,7 +9,6 @@ import '../../styles/pages/Dashboard.scss';
 const ExerciseModal = ({
   isModalOpen,
   selectedExercise,
-  openModal,
   closeModal,
 }) => {
   // if (!isModalOpen || !selectedExercise) return null; // Return null if modal is not open or no exercise is selected
@@ -32,6 +31,7 @@ const ExerciseModal = ({
 
       <div className='exercise-modal_video_url'>
         <div>Tutorial</div>
+        <span></span>
       </div>
 
       <br></br>
