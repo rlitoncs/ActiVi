@@ -5,7 +5,9 @@ import { Outlet } from "react-router-dom";
 const Layout = () => {
   return (
     <div className="main-container">
-      <Sidebar className="sidebar" />
+      <div className="sidebar">
+        <Sidebar />
+      </div>
       <div className="content-area">
         <Outlet />
       </div>
