@@ -1,10 +1,32 @@
 const db = require('../connection');
 
-const getUserWorkoutData = (selected_date) => {
-  return db.query(`SELECT user_workouts.id, duration, calories_burned, is_completed, sets, reps, weight, exercises.exercise_name, exercises.muscle_group from user_workouts JOIN exercises ON exercise_id = exercises.id WHERE user_id = 1 AND date='${selected_date}' ORDER BY id;`)
-    .then(data => {
-      return data.rows;
-    });
+const getUserWorkoutDatawithTotal = (selected_date) => {
+  // First query: Get user workout data
+  const userWorkoutDataQuery = db.query(`
+    SELECT user_workouts.id, duration, calories_burned, is_completed, sets, reps, weight, exercises.exercise_name, exercises.muscle_group 
+    FROM user_workouts 
+    JOIN exercises ON exercise_id = exercises.id 
+    WHERE user_id = 1 AND date='${selected_date}' 
+    ORDER BY id;
+  `);
+
+  // Second query: Get the total count of workouts
+  const totalUserWorkoutsQuery = db.query(`
+    SELECT COUNT(*)
+    FROM user_workouts 
+    WHERE user_id = 1 AND date='${selected_date}';
+  `);
+
+  return Promise.all([userWorkoutDataQuery, totalUserWorkoutsQuery])
+    .then(([workoutData, totalWorkoutsData]) => {
+      const userWorkouts = workoutData.rows;
+      const totalWorkouts = totalWorkoutsData.rows[0].count; // retrieves count value
+
+      return {
+        userWorkouts,
+        totalWorkouts
+      }
+    })
 };
 
 const updateUserWorkoutData = (workout_id , editData) => {
@@ -65,4 +87,4 @@ const deleteUserWorkout = (workout_id) => {
     .then(() => "Successfully deleted workout")
 }
 
-module.exports = { getUserWorkoutData, updateUserWorkoutData, deleteUserWorkout };
+module.exports = { getUserWorkoutDatawithTotal, updateUserWorkoutData, deleteUserWorkout };

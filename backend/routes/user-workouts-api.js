@@ -6,10 +6,11 @@ const userWorkoutsQueries = require('../db/queries/userWorkouts');
 router.get('/:date', (req, res) => {
   const { date } = req.params;
 
-  userWorkoutsQueries.getUserWorkoutData(date) //requires argument selected_date
+  userWorkoutsQueries.getUserWorkoutDatawithTotal(date) //requires argument selected_date
     .then(data => {
       res.json(data);
     })
+  
 })
 
 // GET /api/userWorkouts/[:id]
