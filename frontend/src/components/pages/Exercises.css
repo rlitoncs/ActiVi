@@ -1,0 +1,32 @@
+.mock-image img {
+  height: 300px;
+  width: 100%;
+}
+
+.exec {
+  margin: 30px;
+}
+
+.search-box {
+  border: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  margin-left: 30px;
+  padding: 10px;
+  padding-left: 600px; /* Adjust this value to provide space for the icon */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: lightgray;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 16px;
+  color: #aaa;
+}
