@@ -6,7 +6,6 @@
     display:flex;
     flex-direction: column;
     align-content: space-between;
-
     background: #EB8C34;
 
     .ant-menu-item{
@@ -18,7 +17,6 @@
       padding-top: 35px;
       padding-bottom: 20px;
 
-      
       .anticon, .MuiSvgIcon-root {
         font-size: 25px;
       }
@@ -42,7 +40,6 @@
         color: white;
       }
     }
-  
   }
   
   .toggle{
@@ -54,5 +51,4 @@
     background: #EB8C34;
   }
   
-
 }
