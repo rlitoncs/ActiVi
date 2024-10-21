@@ -1,21 +1,22 @@
 .nav-menu-items {
+  height: 100vh; // Ensure the sidebar fills the height of the viewport
+  background: #EB8C34;
+
   .ant-menu{
     display:flex;
     flex-direction: column;
-    height: 100vh;
-    gap: 15px;
-    font-size: 1rem;
-    position: relative;
+    align-content: space-between;
     background: #EB8C34;
 
-    
     .ant-menu-item{
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin-top: 30px;
-      
+      padding-top: 35px;
+      padding-bottom: 20px;
+
       .anticon, .MuiSvgIcon-root {
         font-size: 25px;
       }
@@ -23,12 +24,7 @@
         margin-inline-start:0;
       }
     }
-    .ant-menu-item.dashboard-menu-item,
-    .ant-menu-item.exercise-menu-item,
-    .ant-menu-item.faq-menu-item {
-      position: relative;
-      top: 18vh;
-    }
+
     .ant-menu-item.dashboard-menu-item:hover,
     .ant-menu-item.exercise-menu-item:hover, 
     .ant-menu-item.logout-menu-item:hover,
@@ -44,10 +40,6 @@
         color: white;
       }
     }
-    
-    .ant-menu-item.logout-menu-item {
-      margin-top: auto;
-    }
   }
   
   .toggle{
@@ -56,7 +48,7 @@
     align-items: flex-end;
     flex: 0;
     margin-bottom: 20px;
+    background: #EB8C34;
   }
   
-
 }
