@@ -25,11 +25,12 @@ app.use(cookieSession({
 // Prep Routes
 const exampleRoute = require('./routes/example');
 const userWorkoutsApiRoutes = require('./routes/user-workouts-api');
+const exerciseModalApiRoutes = require('./routes/exercise-modal-api');
 
 // Mount Routes
 app.use('/example', exampleRoute);
 app.use('/api/userWorkouts', userWorkoutsApiRoutes);
-app.use('/api/exercises', )
+app.use('/api/exercises/', exerciseModalApiRoutes);
 
 
 
