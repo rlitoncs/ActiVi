@@ -1,0 +1,23 @@
+.exercise-list__item {
+  margin: 24px;
+  padding: 8px;
+  border-width: 0.5px;
+  border-color: lightgray;
+  border-style: solid;
+  border-radius: 8px;
+  max-width: fit-content;
+  cursor: pointer;
+}
+
+.exercise-list__image {
+  border-radius: 8px 8px 0px 0px;
+  user-select: none;
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.add-button {
+  margin-right: 50px;
+  
+}
