@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ExerciseListItem from './ExerciseListItem';
+import './ExercisesList.css';
 
 const ExerciseList = () => {
   const [exercises, setExercises] = useState([]);
@@ -18,20 +19,17 @@ const ExerciseList = () => {
   }, []);
   console.log(exercises.photo_url);
   return (
-    <div>
-
-      {/*<div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>*/}
+    <div className='exercise-list__main'>  
         {exercises.map(exercise => {
             return (<ExerciseListItem
               key={exercise.id}
               id={exercise.id}
-              src={"https://github.com/rlitoncs/ActiVi/blob/seeds/backend/public/images/incline_hammer_curls1.png?raw=true"}
+              src={exercise.photo_url}
               alt={exercise.exercise_name}
               />
             )
           })
         }
-      {/*</div>*/}
     </div>
   );
 };
