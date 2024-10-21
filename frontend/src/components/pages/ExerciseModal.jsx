@@ -25,20 +25,20 @@ const ExerciseModal = () => {
       </button>
 
       <div className='exercise-modal_exercises'>
-        <h1>Bench Press </h1> //exercise.exercise_name//
+        <h1>Bench Press </h1> 
       </div>
 
       <br></br>
 
       <div className='exercise-modal_muscle_group'>
-        <div># Chest </div> //# exercise.muscle_group//
+        <div># Chest </div> 
       </div>
 
       <br></br>
 
       <div className='exercise-modal_video_url'>
         <div>Tutorial</div>
-        <span></span> //exercise.video_url//
+        <span></span> 
       </div>
 
       <br></br>
@@ -46,10 +46,10 @@ const ExerciseModal = () => {
       <div className='exercise-modal_exercises'>
         <div classname='exercise-modal_description'></div>
         <div>Description </div>
-        <p></p> //exercise.description//
+        <p></p> 
         <br></br>
         <div>Equipment</div>
-        <p></p> //exercise.equipment//
+        <p></p>
       </div>
     </div>
   );
