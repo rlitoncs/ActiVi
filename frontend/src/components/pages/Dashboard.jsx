@@ -20,7 +20,7 @@ const Dashboard = () => {
       <CalendarProvider>
       <div className='section-header-calendar'>
         <h1> Welcome Back, Name</h1>
-          <Calendar />
+        <Calendar />
       </div>
 
       <div className='section-workouts-title'>
