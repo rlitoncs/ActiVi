@@ -8,7 +8,7 @@ const HomeLayout = () => {
       <div className="home-nav-bar-container">
         <HomeNavigationBar />
       </div>
-      <div className="home-content-area">
+      <div className="home-content-area-container">
         <Outlet />
       </div>
     </div>

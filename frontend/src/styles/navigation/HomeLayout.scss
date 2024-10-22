@@ -1,9 +1,13 @@
 .home-container{
-  // font
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .home-nav-bar-container{
   display: flex;
   justify-content: center;
   background: #EB8C34;
+}
+
+.home-content-area-container{
+  height: 100vh;
 }
