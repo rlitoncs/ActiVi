@@ -1,4 +1,6 @@
 import './App.css';
+import HomeLayout from './components/navigation/HomeLayout';
+import Home from './components/beyondMVP/Home';
 import Login from './components/beyondMVP/Login';
 import Logout from './components/beyondMVP/Logout';
 import Layout from './components/navigation/Layout';
@@ -10,16 +12,22 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h1> hello from root page </h1>
-  },
-  {
-    path: "/login",
-    element: <Login />
-  },
-  {
-    path: "/logout",
-    element: <Logout />
-  },  
+    element: <HomeLayout/>,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/logout",
+        element: <Logout />
+      }
+    ] 
+  }, 
   {
     element: <Layout />,
     children: [
