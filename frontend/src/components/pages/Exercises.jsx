@@ -1,5 +1,5 @@
-import ExercisesList from './ExercisesList';
-import './Exercises.css';
+import ExercisesList from '../ExercisesList';
+import '../../styles/Exercises.scss';
 
 const Exercises = () => {
   
@@ -8,6 +8,7 @@ const Exercises = () => {
       <div>
        <h2 className='exec'>Exercises</h2>  
       </div>
+      
       <ExercisesList/>         
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
-import './ImageButton.css';  // Create a separate CSS file for styles
+import '../styles/ImageButton.scss';  
 
 const ImageButton = ({onClick }) => {
   return (

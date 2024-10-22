@@ -1,0 +1,33 @@
+.exercise-list__main {
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+    padding-left: 30px;
+  }  
+ 
+  .dropdown-label {
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+    padding: 10px 10px; 
+  }
+  
+  .hidden-select {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+  }

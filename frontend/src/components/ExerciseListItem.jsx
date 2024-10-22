@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageButton from './ImageButton';
-import './ExerciseListItem.css';
+import '../styles/ExerciseListItem.scss';
 
 
 
