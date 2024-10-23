@@ -1,0 +1,71 @@
+.activi__footer{
+  display: flex;
+  background-color: #f9f8f5;
+  height: 300px;
+}
+
+.footer__logo__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1728px;
+  padding: 30px;
+}
+
+.footer__footer__ {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1;
+}
+
+.footer__logo{
+  .footer__logo__title {
+    margin-left: 4px;
+  }
+}
+
+.footer__logo__details{
+  font-size: 15px;
+  color: #777777;
+}
+
+.footer__media__links{
+  display: flex;
+  gap: 20px;
+  a {
+    color: black;
+  }
+
+  svg{
+    font-size: 25px;
+  }
+}
+
+.footer__footer__email{
+  align-content: center;
+  padding-right: 50px;
+}
+
+.footer__footer__email{
+  flex: 2 1;
+}
+
+.footer__form{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+
+  .footer__form__label{
+    margin-bottom: 10px;
+  }
+
+  input{
+    border: none;
+    padding: 10px;
+    border-bottom: black 1px solid;
+  }
+}
