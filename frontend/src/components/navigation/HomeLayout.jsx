@@ -1,5 +1,6 @@
 import '../../styles/navigation/HomeLayout.scss'
 import HomeNavigationBar from './HomeNavigationBar';
+import Footer from './Footer';
 import { Outlet } from "react-router-dom";
 
 const HomeLayout = () => {
@@ -10,6 +11,9 @@ const HomeLayout = () => {
       </div>
       <div className="home-content-area-container">
         <Outlet />
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );
