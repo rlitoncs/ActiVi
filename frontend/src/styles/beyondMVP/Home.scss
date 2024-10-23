@@ -1,0 +1,438 @@
+.home__image__container{
+  width: 100%;
+  position: relative; 
+  
+
+  img {
+    width: 100%;
+    height: 634px; 
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.4;
+    z-index: 1; // Place the overlay above the image but below the text
+  }
+}
+
+.home__content__container{
+  position: absolute;
+  z-index: 2;
+  top: 13%;         /* Centers the text vertically */
+  left: 25%;        /* Centers the text horizontally */
+  margin: auto;
+
+  .home__content__title{
+    color: white;
+    font-size: 8em;
+    font-weight:600;
+  }
+
+  .home__content__text{
+    font-size: 1.5em;
+    width: 35%;
+    color:White;
+    margin-top: 20px;
+    font-weight:600;
+  }
+
+  .home_learn_more_btn{
+    background: #EB8C34;
+    border-radius: 4px;
+    padding: 10px 24px;
+    color: white;
+    margin-top: 20px;
+    width: 25%;
+  }
+
+  .home_learn_more_btn:hover{
+    background-color: #3185c0;
+    transition: background-color 0.5s ease;
+  }
+}
+
+// --------------------------------------------------------
+
+.activi__section__1{
+  margin-bottom: 100px;
+}
+
+.activi__content__header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+
+  .activi__content__title{
+    font-size: 2.5em;
+    font-weight:600;
+  }
+}
+
+.activi__content{
+  display: flex;
+  justify-content: center;
+}
+
+.grid__container{
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-column-gap: 50px;
+  // text-align: center;
+}
+
+.grid__item__1, .grid__item__2, .grid__item__3{
+  border: 1px solid #C5C5C5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.grid__item__1, .grid__item__2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+.grid__item__1__content__header, 
+.grid__item__2__content__header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+
+.grid__workout__1, .grid__workout__2, .grid__workout__3 {
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #C5C5C5;
+  padding: 10px;
+  width: 90%;
+  height: auto;
+  background: #f4f4f4;
+
+  .grid__workout__title{
+    color: #EB8C34;
+    font-weight: 400;
+  }
+
+  .grid__workout__muscle,
+  .grid__workout__sets__reps,
+  .grid__workout__weight,
+  .grid__workout__calories,
+  .grid__workout__duration{
+    font-size: 10px;
+  }
+
+}
+
+.grid__workout__3 {
+  margin-bottom: 20px;
+}
+
+.grid__workout__1:hover, 
+.grid__workout__2:hover, 
+.grid__workout__3:hover{
+  background: #dbdbdb;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.grid__workout__muscle{
+  display: inline-block;
+  background-color: rgb(110, 160, 246);
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin: 5px 0;
+  color: white;
+}
+
+.grid__workout__metrics{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.grid__exercise__1, .grid__exercise__2, .grid__exercise__3 {
+  position: relative;
+} 
+
+.exercise__hide, .exercise__show {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in;
+  color: white;
+  cursor: pointer;
+  text-align: center;  
+
+}
+
+.exercise__hide {
+  opacity: 0;
+}
+.exercise__show {
+  opacity: 1;
+}
+
+
+// ----------------------------------------------------------------------------
+
+.grid__item__2 img{
+    width: 200px;
+    height: 147px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #C5C5C5;
+    // margin-top: 20px;
+  }
+
+// ----------------------------------------------------------------------------
+
+
+.activi__section__2{
+  background: #EB8C34;
+}
+
+
+.section__2__container {
+  display:grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+}
+
+.section__2__calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .MuiDateCalendar-root, .css-5wchs2-MuiDateCalendar-root{
+    margin: 30px 0;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    max-height: 600px;
+    background:white;
+  }
+
+  .MuiPickersSlideTransition-root{
+    min-height: 500px;
+
+  }
+
+  .MuiTypography-root, .MuiPickersDay-root, .MuiPickersCalendarHeader-root{
+    font-size: 1.2rem;
+    // padding: 10px;
+    margin: 20px;
+  }
+
+}
+
+.s2__calendar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 500px;
+}
+
+
+.s2__header{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+    
+  .s2__title {
+    font-size: 60px;
+    font-weight: 600;
+    span {
+      color:white;
+    }
+    span:hover{
+      transition: color 0.5s ease;
+      color: #beff96;
+    }
+
+  }
+
+  .s2__details{
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  .s2__details__2 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #beff96;
+    font-weight: 400;
+  }
+}
+
+
+.s2__grid__container{
+  display:grid;
+  grid-template-columns: repeat(3, 180px);
+  grid-column-gap: 50px;
+}
+
+.s2__grid__item__1,
+.s2__grid__item__2,
+.s2__grid__item__3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: #93ecd5;
+  border-radius: 10px;
+  height: 150px;
+  width: 200px;
+  transition: transform 0.5s;
+  
+
+  .MuiSvgIcon-root {
+    font-size: 60px;
+  }
+}
+.s2__grid__item__1:hover,
+.s2__grid__item__2:hover,
+.s2__grid__item__3:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+// ------------------------------------------------------------------------------------------
+
+.activi__section__3{
+  margin-bottom: 100px;
+}
+
+.s3__faq__header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .s3__title {
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+
+.s3__faq__gallery{
+  display: flex;
+  width: 1500px;
+  overflow-x: scroll;
+
+  .s3__faq__gallery__items{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    padding: 10px;
+    flex: none;
+  }
+  
+  .s3__gallery__item__1, 
+  .s3__gallery__item__2,
+  .s3__gallery__item__3,
+  .s3__gallery__item__4 {
+    width: 100%;
+    transition: transform 0.5s;
+    border: 1px solid #C5C5C5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+
+    .s3__gallery__title{
+      font-size: 32px;
+      color: #EB8C34;
+      text-align: center;
+      line-height: 35px;
+    }
+
+    .s3__gallery__details{
+      text-align: center;
+    }
+  }
+
+}
+
+/* Safari and Chrome */
+.activi__section__3 .s3__faq .s3__faq__gallery::-webkit-scrollbar{
+  display: none;
+}
+
+// Firefox
+.activi__section__3 .s3__faq .s3__faq__gallery{
+  scrollbar-width: none; 
+}
+
+.s3__faq__gallery__wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin: 10% auto;
+}
+
+#backBtn, #nextBtn {
+  cursor: pointer;
+  margin: 40px;
+  padding: 5px;
+  border-radius: 40px;
+  background: #EB8C34;
+}
+
+#backBtn:hover, #nextBtn:hover{
+  background: #c26813;
+  transition: background-color 0.5s ease;
+}
+
+
+.s3__faq__gallery {
+  .s3__gallery__item__1:hover, 
+  .s3__gallery__item__2:hover,
+  .s3__gallery__item__3:hover,
+  .s3__gallery__item__4:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px, typically tablets and mobile devices */
+  .section__2__grid__item__1 {
+    .MuiDateCalendar-root, .css-5wchs2-MuiDateCalendar-root{
+      width: 100%;
+    }
+
+    .MuiPickersSlideTransition-root{
+      min-height: 250px;
+
+    }
+    .MuiTypography-root, .MuiPickersDay-root, .MuiPickersCalendarHeader-root{
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+}
