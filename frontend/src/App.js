@@ -5,6 +5,7 @@ import Layout from './components/navigation/Layout';
 import Exercises from './components/pages/Exercises';
 import Dashboard from './components/pages/Dashboard';
 import FAQ from './components/beyondMVP/FAQ';
+import About from './components/beyondMVP/About';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     path: "/logout",
     element: <Logout />
   },  
+  {
+    path: "/about",
+    element: <About />
+  },
   {
     element: <Layout />,
     children: [
