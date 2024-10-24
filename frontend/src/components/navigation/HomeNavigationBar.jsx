@@ -1,5 +1,7 @@
 import '../../styles/navigation/HomeNavigationBar.scss';
 import HomeLogo from './HomeLogo';
+import { Link} from 'react-router-dom';
+
 
 const HomeNavigationBar = () => {
   return (
@@ -8,18 +10,26 @@ const HomeNavigationBar = () => {
         <div className="home__nav__container">
           <div className="home__logo__links">
             <div className="home__logo__container">
-              <HomeLogo /> 
+              <Link to="/"> <HomeLogo /> </Link>
               <span className="home__activi">ActiVi</span>
             </div>
             <ul className="home__nav__links">
-              <li><button className="home__button__item">Home</button></li>
-              <li><button className="home__about__item">About</button></li>
-              <li><button className="home__contact__item">Contact</button></li>
+              <li>
+                <Link to="/"><button className="home__button__item">Home</button></Link>
+              </li>
+              <li>
+                <Link to="/about"><button className="home__about__item">About</button></Link>
+              </li>
+              <li>
+                <Link to="/contact"><button className="home__contact__item">Contact</button></Link>
+              </li>
 
             </ul>
           </div>
           <div>
-            <span className="home__gs">Get Started</span>
+            <Link to="/login" style={{textDecoration:"none", color: "white"}}> 
+              <button className="home__gs">Get Started</button>
+            </Link>
           </div>
        </div>
       </div>
