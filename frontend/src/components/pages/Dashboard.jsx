@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/pages/Dashboard.scss'
-import CalendarProvider from '../../providers/CalendarProvider';
 import Calendar from '../Calendar';
 import WorkoutList from '../WorkoutList';
 import useEdit from '../../hooks/useEdit';
@@ -17,7 +16,6 @@ const Dashboard = () => {
 
   return(
     <div className='dashboard-container'>
-      <CalendarProvider>
       <div className='section-header-calendar'>
         <h1> Welcome Back, Name</h1>
         <Calendar />
@@ -38,7 +36,6 @@ const Dashboard = () => {
         }
 
       </div>
-      </CalendarProvider>
     </div>
   )
 }
