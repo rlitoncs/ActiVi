@@ -3,7 +3,7 @@ CREATE TABLE User_Workouts (
     id SERIAL PRIMARY KEY NOT NULL,
     date DATE,
     duration INT,
-    calories_burned DECIMAL(5, 2),
+    calories_burned DECIMAL(6, 2),
     is_completed BOOLEAN,
     sets INT,
     reps INT,
