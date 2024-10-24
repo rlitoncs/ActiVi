@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userWorkoutsQueries = require('../db/queries/userWorkouts');
+const { route } = require('./example');
 
 // GET /api/userWorkouts/[:date]
 router.get('/:date', (req, res) => {
@@ -13,7 +14,18 @@ router.get('/:date', (req, res) => {
   
 })
 
-// GET /api/userWorkouts/[:id]
+
+// POST /api/userWorkouts/
+router.post('/', (req,res) => {
+  const { userWorkout } = req.body;
+
+  userWorkoutsQueries.addUserWorkoutData(userWorkout)
+    .then(() => {
+      res.sendStatus(200);
+    })
+})
+
+// POST /api/userWorkouts/[:id]
 router.post('/:id', (req,res) => {
   const { id } = req.params;
   const { formData } = req.body;
@@ -25,6 +37,7 @@ router.post('/:id', (req,res) => {
 
 })
 
+// POST /api/userWorkouts/delete/[:id]
 router.post('/delete/:id', (req, res) => {
   const { id } = req.params;
 
