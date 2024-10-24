@@ -3,13 +3,12 @@ import axios from 'axios';
 import ExerciseListItem from './ExerciseListItem';
 import '../styles/ExercisesList.scss';
 import { FaBars, FaSearch } from "react-icons/fa";
+import { useCalendar } from '../providers/CalendarProvider';
 
-const ExerciseList = () => {
+const ExerciseList = ({addWorkout}) => {
   const [exercises, setExercises] = useState([]);
   const [selectedType, setSelectedType] = useState('All');
   const [selectedMuscle, setSelectedMuscle] = useState('All');
-
-
 
   const [filteredExercises, setFilteredExercises] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -61,6 +60,14 @@ const ExerciseList = () => {
 
   // logic for the Exercise Type and Muscles Group dropdown.
     
+  const { selectedDate } = useCalendar(); 
+  const date = {
+    year: selectedDate["$y"],
+    month: Number(selectedDate["$M"] + 1).toString(),
+    day: selectedDate["$D"]
+  }
+
+  const dateQuery = date.year + "-" + date.month + "-" + date.day;
 
   return (
     <div >
@@ -111,6 +118,8 @@ const ExerciseList = () => {
             id={exercise.id}
             src={exercise.photo_url}
             alt={exercise.exercise_name}
+            addWorkout={addWorkout}
+            dateQuery={dateQuery}
           />
           )
         })}
