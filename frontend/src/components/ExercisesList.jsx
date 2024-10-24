@@ -44,7 +44,7 @@ const ExerciseList = () => {
     let searchFilter = exercises.filter((exercise) => exercise.exercise_name.toLowerCase().includes(searchTerm.toLowerCase()));
     console.log(searchFilter,'searchFilter')
 
-    //moved logic
+     // logic for the Exercise Type and Muscles Group dropdown.
     const realExercises = searchFilter.filter(exercise => {
       const exerciseType = selectedType === 'Cardio' ? 2 : 1;
       let isType = exercise.exercise_type_id === exerciseType;
@@ -56,7 +56,6 @@ const ExerciseList = () => {
       const shouldKeep = isType === true && isMuscle === true;
       return shouldKeep;
     });
-
     setFilteredExercises(realExercises);
   }, [searchTerm, selectedMuscle, selectedType ])
 
