@@ -1,4 +1,4 @@
-import '../styles/EditModalWorkout.scss';
+import '../styles/AddEditModalWorkout.scss';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import TextField from '@mui/material/TextField';
@@ -10,21 +10,21 @@ const EditModalWorkout = ({workout, status, closeEditWorkout, handleChange,
   handleSubmit}) => {
   
   return (
-    <div className="edit-details-modal">
+    <div className="edit-details-modal add">
 
-      <div className="edit-details-modal-close" onClick={closeEditWorkout}>
+      <div className="edit-details-modal-close add" onClick={closeEditWorkout}>
         <CloseIcon />
       </div>
       
-      <div className="edit-title-modal">
+      <div className="edit-title-modal add">
         {workout.exercise_name}
       </div>
 
-      <div className="edit-form-modal">
+      <div className="edit-form-modal add">
           <form onSubmit={handleSubmit}>
             <h4> Sets / Reps </h4>
-            <div className="edit-form-sets-reps">
-              <div className="edit-form-sets">
+            <div className="edit-form-sets-reps add">
+              <div className="edit-form-sets add">
                 <TextField
                   id="outlined-number"
                   label="Sets"
@@ -38,7 +38,7 @@ const EditModalWorkout = ({workout, status, closeEditWorkout, handleChange,
                   }}
                 />
               </div> 
-              <div className="edit-form-reps">
+              <div className="edit-form-reps add">
                 <TextField
                   id="outlined-number"
                   label="Reps"
@@ -55,7 +55,7 @@ const EditModalWorkout = ({workout, status, closeEditWorkout, handleChange,
             </div>
 
             <h4> Weight </h4>
-            <div className="edit-form-weight"> 
+            <div className="edit-form-weight add"> 
               <TextField
                 id="outlined-number"
                 label="Weight (lbs)"
@@ -71,7 +71,7 @@ const EditModalWorkout = ({workout, status, closeEditWorkout, handleChange,
             </div>
 
             <h4> Calories </h4>
-            <div className="edit-form-calories"> 
+            <div className="edit-form-calories add"> 
               <TextField
                 id="outlined-number"
                 label="Calories Burned"
@@ -87,7 +87,7 @@ const EditModalWorkout = ({workout, status, closeEditWorkout, handleChange,
             </div>
 
             <h4> Duration </h4>
-            <div className="edit-form-duration">
+            <div className="edit-form-duration add">
               <TextField
                 id="outlined-number"
                 label="Duration (mins)"
@@ -103,7 +103,7 @@ const EditModalWorkout = ({workout, status, closeEditWorkout, handleChange,
             </div>
 
           <div> 
-            <Button className="edit-form-button" type="submit" >
+            <Button className="edit-form-button add" type="submit" >
               {!status.loading && !status.success && "Submit"}
               {status.loading && <CircularProgress style={{ color: "white", width: "20px", height:"20px"}}/> }
               {status.success && <CheckOutlinedIcon />}
@@ -112,7 +112,7 @@ const EditModalWorkout = ({workout, status, closeEditWorkout, handleChange,
           </div>
 
           {status.error &&
-            <div className="edit-form-error">
+            <div className="edit-form-error add">
               * At least one field must be filled 
             </div>
           }
