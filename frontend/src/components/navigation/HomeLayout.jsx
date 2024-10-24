@@ -12,7 +12,7 @@ const HomeLayout = () => {
       <div className="home-content-area-container">
         <Outlet />
       </div>
-      <div>
+      <div className="footer-content-container">
         <Footer/>
       </div>
     </div>
