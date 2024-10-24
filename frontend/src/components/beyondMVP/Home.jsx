@@ -1,5 +1,6 @@
 import '../../styles/beyondMVP/Home.scss';
 import { useEffect, useRef, useState } from "react";
+import { Link } from 'react-router-dom';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
@@ -78,6 +79,33 @@ const Home = () => {
     };
   }, []);
 
+  // -----------------------------------------------
+  const refs = useRef([]);
+
+  const setRefs = (element) => {
+    if (element && !refs.current.includes(element)){
+      refs.current.push(element);
+    }
+  }
+
+  useEffect(() => {
+    // Console log to see what is inside refs
+    refs.current.forEach((ref, index) => {
+      console.log(`Element ${index}:`, ref)
+    })
+
+    //create the Intersection Observer
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+      })
+    })
+
+    refs.current.forEach(section => {
+      observer.observe(section);
+    })
+
+  }, [])
 
   return (
     <div className="home__container">
@@ -97,11 +125,13 @@ const Home = () => {
           <p className='home__content__text'>
             Stay committed, because the journey to fitness is a lifestyle, not a destination!
           </p>
-          <button className="home_learn_more_btn">Learn More</button>
+          <Link to="/login" style={{textDecoration:"none", color: "white"}}> 
+            <button className="home_learn_more_btn"> Learn More</button> 
+          </Link>
         </div>
       </section>
 
-      <section className="activi__section__1">
+      <section className="activi__section__1" ref={setRefs}>
         <div className="activi__content__header">
           <h1 className="activi__content__title"> 
             Discover Your <span style={{color:"#EB8C34"}}>Strength</span>
@@ -186,7 +216,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="activi__section__2">
+      <section className="activi__section__2" ref={setRefs}>
         <div className="section__2__container">
           {/* Calendar */}
           <div className="section__2__calendar">
@@ -216,15 +246,18 @@ const Home = () => {
                 <div className="s2__grid__item__3">
                   <FavoriteBorderOutlinedIcon/>
                 </div>
-
               </div>
             </div>
           </div>
 
         </div>
+
+        <div className="calendar-side-img">
+          <img src={"https://static.vecteezy.com/system/resources/previews/037/920/868/non_2x/ai-generated-liquid-paint-splash-isolated-on-transparent-background-free-png.png"}></img>
+        </div>
       </section>
 
-      <section className="activi__section__3">
+      <section className="activi__section__3" ref={setRefs}>
         <div className="section__3__container">
 
     
