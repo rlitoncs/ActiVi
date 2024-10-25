@@ -1,4 +1,5 @@
 import '../../styles/navigation/Layout.scss';
+import CalendarProvider from '../../providers/CalendarProvider';
 import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
 
@@ -9,7 +10,9 @@ const Layout = () => {
         <Sidebar />
       </div>
       <div className="content-area">
-        <Outlet />
+        <CalendarProvider>
+          <Outlet />
+        </CalendarProvider>
       </div>
     </div>
   );

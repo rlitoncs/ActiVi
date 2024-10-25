@@ -11,7 +11,7 @@ const ExerciseListItem = (props) => {
   };
 
   const onAddClick = () => {
-    alert('+ button clicked');
+    props.addWorkout({exercise_id: props.id, exercise_name: props.alt, dateQuery: props.dateQuery});
   }
 
   return(
