@@ -103,10 +103,14 @@ const EditModalWorkout = ({workout, status, closeEditWorkout, handleChange,
             </div>
 
           <div> 
-            <Button className="edit-form-button add" type="submit" >
+            <Button className={status.success ? "edit-form-button add success" : "edit-form-button add"} type="submit" >
               {!status.loading && !status.success && "Submit"}
               {status.loading && <CircularProgress style={{ color: "white", width: "20px", height:"20px"}}/> }
-              {status.success && <CheckOutlinedIcon />}
+              {status.success && (
+                <>
+                  Updated <CheckOutlinedIcon />
+                </>
+              )}
     
             </Button>
           </div>

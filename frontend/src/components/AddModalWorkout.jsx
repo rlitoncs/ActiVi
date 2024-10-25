@@ -108,7 +108,7 @@ const AddModalWorkout = ({workout, status, closeAddWorkout, handleChange,
               {status.loading && <CircularProgress style={{ color: "white", width: "20px", height:"20px"}}/> }
               {status.success && (
                 <>
-                  Success <CheckOutlinedIcon />
+                  Added <CheckOutlinedIcon />
                 </>
               )}
     

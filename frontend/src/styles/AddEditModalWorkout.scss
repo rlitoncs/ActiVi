@@ -69,14 +69,29 @@
   }
 
   .edit-form-button.success{
-    background: #1EE593;
-    border-color: #1EE593;
-    transform: background 1s ease;
+    background: #16bb50;
+    border-color: #16bb50;
+    transition: background-color 0.8s ease, border-color 0.8s ease;
   }
 
+  span.hide {
+    opacity: 0;
+    transition: opacity 10s ease; /* Ensure transition is applied here too */
+    margin: 0;
+    padding: 0;
+  }
+  
+  span.show {
+    opacity: 1;
+    transition: opacity 10s ease;
+    margin: 0;
+    padding: 0;
+  }
+  
   .edit-form-error.add{
     font-style: italic;
     color: red;
   }
 
 }
+
