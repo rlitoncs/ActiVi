@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageButton from './ImageButton';
 import '../styles/ExerciseListItem.scss';
+import '../styles/pages/modal';
 import useExerciseModal from '../hooks/useExerciseModal';
 
 
@@ -31,7 +32,7 @@ const ExerciseListItem = ({ key, id, src, alt, addWorkout, dateQuery }) => {
       </div>
 
       {isModalOpen && selectedExercise && (
-        <div className="modal">
+        <div className="exercise-modal-container ">
           <h3>{selectedExercise.alt}</h3>
           <img src={selectedExercise.src} alt={selectedExercise.alt} />
           <button onClick={closeModal}>Close</button>
