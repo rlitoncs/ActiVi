@@ -19,6 +19,7 @@ const ExerciseListItem = (props) => {
       <div className='card-content'>
         
       <img 
+        style={{objectFit: "stretch", objectPosition: "top"}}
         className="exercise-list__image"
         id={props.id}
         src={props.src}
