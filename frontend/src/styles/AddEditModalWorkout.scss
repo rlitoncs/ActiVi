@@ -64,6 +64,16 @@
     margin-left:25px;
   }
 
+  .edit-form-button.add, .edit-form-error.add {
+    margin-left:25px;
+  }
+
+  .edit-form-button.success{
+    background: #1EE593;
+    border-color: #1EE593;
+    transform: background 1s ease;
+  }
+
   .edit-form-error.add{
     font-style: italic;
     color: red;
