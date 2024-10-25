@@ -3,15 +3,14 @@ import ImageButton from './ImageButton';
 import '../styles/ExerciseListItem.scss';
 
 
-
-const ExerciseListItem = (props) => {
+const ExerciseListItem = ({ key, id, src, alt, addWorkout, dateQuery }) => {
 
   const handleClick = () => {
-    alert('Image clicked!'); 
+    console.log(`Clicked on exercise: ${alt}`);
   };
 
   const onAddClick = () => {
-    props.addWorkout({exercise_id: props.id, exercise_name: props.alt, dateQuery: props.dateQuery});
+    addWorkout({ exercise_id: id, exercise_name: alt, dateQuery });
   }
 
   return(
@@ -20,14 +19,13 @@ const ExerciseListItem = (props) => {
         
       <img 
         className="exercise-list__image"
-        id={props.id}
-        src={props.src}
-        alt={props.alt}        
+        id={id}
+        src={src}
+        alt={alt}        
         onClick={handleClick}      
       />     
       <ImageButton className='add-button' onClick={onAddClick} />
       </div>
-      
     </div>
   );
 };
