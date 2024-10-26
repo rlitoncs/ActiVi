@@ -1,61 +1,47 @@
 .about-container {
-  position: relative;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-family: 'Poppins', sans-serif;
-  color: #555;
-  margin-bottom: 1rem;
+  background-color: #f5eadf;
 }
 
-/* Sidebar adjustments */
 .about-container Sidebar {
-  position: absolute;
-  left: 0;
-  top: 0;
+  flex: 200px;
 }
 
-/* Common styles for text boxes */
-.about-title,
+.about-content {
+  flex-direction: column;
+}
+
+.about-title {
+  top: 25%;
+  left: 100%;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
 .about-body2,
 .about-body3,
 .about-body4,
 .about-body5 {
-  max-width: 500px;
-  padding: 1rem;
-  background-color: #f3f3f3;
-  position: absolute;
-  font-weight: 400;
+  font-size: 16px;
+  color: #555;
   line-height: 1.6;
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 10px;
-}
-
-/* Adjust individual boxes for diagonal layout */
-.about-title {
-  top: 5%;
-  left: 200px;
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .about-body2 {
-  top: 20%;
-  left: 250px;
+  margin-top: 10%;
+  margin-left: 100px;
 }
 
 .about-body3 {
-  top: 35%;
-  left: 300px;
+  margin-top: 10%;
+  margin-left: 100px;
 }
-
 .about-body4 {
-  top: 55%;
-  left: 350px;
+  margin-top: 10%;
+  margin-left: 100px;
 }
-
 .about-body5 {
-  top: 85%;
-  left: 400px;
+  margin-top: 10%;
+  margin-left: 100px;
 }
