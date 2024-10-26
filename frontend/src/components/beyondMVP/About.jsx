@@ -16,7 +16,7 @@ const About = () => {
 
         <div className='about-body2'>
           <p>
-            We're Ralph, Henry, and Ann of ActiVi. We believe that fitness is a
+            We are Ralph, Henry, and Ann of ActiVi. We believe that fitness is a
             journey, not a destination.
           </p>
         </div>

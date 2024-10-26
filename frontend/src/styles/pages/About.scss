@@ -3,17 +3,15 @@
   background-color: #f5eadf;
 }
 
-.about-container Sidebar {
-  flex: 200px;
-}
-
 .about-content {
   flex-direction: column;
+  align-items: center;
+  flex-grow: 5;
 }
 
 .about-title {
-  top: 25%;
-  left: 100%;
+  margin-top: 10%;
+  margin-left: 200px;
   font-size: 36px;
   font-weight: bold;
   color: #333;
@@ -23,25 +21,26 @@
 .about-body3,
 .about-body4,
 .about-body5 {
-  font-size: 16px;
+  font-size: 17px;
   color: #555;
   line-height: 1.6;
 }
 
 .about-body2 {
-  margin-top: 10%;
-  margin-left: 100px;
+  margin-top: 5%;
+  margin-left: 50px;
+  
 }
 
 .about-body3 {
-  margin-top: 10%;
-  margin-left: 100px;
+  margin-top: 5%;
+  margin-left: 200px;
 }
 .about-body4 {
-  margin-top: 10%;
-  margin-left: 100px;
+  margin-top: 5%;
+  margin-left: 50px;
 }
 .about-body5 {
-  margin-top: 10%;
-  margin-left: 100px;
+  margin-top: 5%;
+  margin-left: 200px;
 }
