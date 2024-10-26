@@ -1,18 +1,32 @@
-import '../.../styles/pages/About.scss'
+import '../../styles/pages/About.scss';
+import '../../styles/navigation/Layout.scss';
+import '../../styles/navigation/Logo.scss';
+import '../../styles/navigation/MenuList.scss';
+import Sidebar from '../navigation/Sidebar';
 
 const About = () => {
-  return(
-    <div className="about-container">
+  return (
+      
+      
+      <div className="about-container">
+        <Sidebar /> 
+        <h1>Nice to Meet You</h1>
 
-    <h1>nice to meet you</h1>
-      <p>
-        We're Ralph, Henry and Ann of ActiVi. We believe that fitness is a journey, not a destination.
-        Our app is designed to help people of all fitness levels reach their goals, whether you're just getting started or looking to take your workouts to the next level.
-        ActiVi makes it easy to stay motivated and committed to a healthier lifestyle. We’re here to support you every step of the way, empowering you to achieve your best self with workouts tailored to your goals,
-        whether it's building strength, improving endurance, or enhancing overall wellness. Join our community and start your fitness journey with us today!
-      </p>
+        <p>
+          We're Ralph, Henry, and Ann of ActiVi. We believe that fitness is a
+          journey, not a destination. Our app is designed to help people of all
+          fitness levels reach their goals, whether you're just getting started
+          or looking to take your workouts to the next level. ActiVi makes it easy to
+          stay motivated and committed to a healthier lifestyle. We’re here to
+          support you every step of the way, empowering you to achieve your best
+          self with workouts tailored to your goals, whether it's building
+          strength, improving endurance, or enhancing overall wellness. Join our
+          community and start your fitness journey with us today!
+        </p>
+    
+      
+      </div>
+  );
+};
 
-    </div>
-  )
-}
-export default About; 
+export default About;

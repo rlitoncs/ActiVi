@@ -1,6 +1,23 @@
+
+.about-container{
+  display: flex;
+}
+
+.sidebar {
+  width: 250px; // Set sidebar width if needed
+}
+
 .about-container {
-display: flex;
-justify-content: center;
-align-items: center;
+  flex: 1;
+  padding: 20px;
+}
+
+.additional-sections .header,
+.additional-sections .row,
+.additional-sections .column,
+.additional-sections .footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
 }
 
