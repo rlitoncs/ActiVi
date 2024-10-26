@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageButton from './ImageButton';
 import '../styles/ExerciseListItem.scss';
-import '../styles/pages/modal';
+import '../styles/pages/Modal.scss';
 import useExerciseModal from '../hooks/useExerciseModal';
 
 
