@@ -43,6 +43,7 @@ const About = () => {
 
         <br />
         <label htmlFor='goal'>What is your goal?</label>
+
         <div className='goal-selection'>
           <select id='goal' name='goal'>
             <option value='lose-weight'>Lose Weight</option>
