@@ -10,7 +10,6 @@ const ExerciseListItem = ({ key, id, src, alt, addWorkout, dateQuery }) => {
 
   const handleClick = () => {
     console.log(`Clicked on exercise: ${alt}`);
-    openModal({ id, src, alt });
   };
 
   const onAddClick = () => {
