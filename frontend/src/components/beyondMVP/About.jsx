@@ -7,42 +7,46 @@ import Sidebar from '../navigation/Sidebar';
 const About = () => {
   return (
     <div className='about-container'>
-      <Sidebar />
+      <div className='image-sidebar'>
+        <Sidebar />
+      </div>
 
       <div className='about-content'>
-        <div className='about-title'>
-          <p>nice to meet you</p>
+        <h1 className='about-title'>nice to meet you.</h1>
+        <p>
+          We are Ralph, Ann, and Henry of ActiVi. We believe that fitness is a
+          journey, not a destination.
+        </p>
+        <p>
+          Our app is designed to help people of all fitness levels reach their
+          goals, whether you're just getting started or looking to take your
+          workouts to the next level. ActiVi makes it easy to stay motivated and
+          committed to a healthier lifestyle. We’re here to support you every
+          step of the way, empowering you to achieve your best self with
+          workouts tailored to your goals, whether it's building strength,
+          improving endurance, or enhancing overall wellness.
+        </p>
+        <p>Join our community and start your fitness journey with us today!</p>
+        <div className='email-signup'>
+          <input
+            type='email'
+            placeholder='Enter your email'
+            className='email-input'
+          />
+          <button type="submit"className='submit-button'>Sign Up</button>
         </div>
 
-        <div className='about-body2'>
-          <p>
-            We are Ralph, Henry, and Ann of ActiVi. We believe that fitness is a
-            journey, not a destination.
-          </p>
-        </div>
+        <label for='goal'>What is your goal?</label>
+        <div class='goal-selection'>
 
-        <div className='about-body3'>
-          <p>
-            Our app is designed to help people of all fitness levels reach their
-            goals, whether you're just getting started or looking to take your
-            workouts to the next level.
-          </p>
-        </div>
-
-        <div className='about-body4'>
-          <p>
-            ActiVi makes it easy to stay motivated and committed to a healthier
-            lifestyle. We’re here to support you every step of the way,
-            empowering you to achieve your best self with workouts tailored to
-            your goals, whether it's building strength, improving endurance, or
-            enhancing overall wellness.
-          </p>
-        </div>
-
-        <div className='about-body5'>
-          <p>
-            Join our community and start your fitness journey with us today!
-          </p>
+          <select id='goal' name='goal'>
+            <option value='lose-weight'>Lose Weight</option>
+            <option value='build-muscle'>Build Muscle</option>
+            <option value='increase-flexibility'>Increase Flexibility</option>
+            <option value='improve-endurance'>Improve Endurance</option>
+            <option value='stay-active'>Stay Active</option>
+          </select>
+          <button type="submit" className="submit-button">Submit</button>
         </div>
       </div>
     </div>
