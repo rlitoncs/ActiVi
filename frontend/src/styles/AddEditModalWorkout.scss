@@ -6,10 +6,12 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
-  height: 50%;
-  width: 40%;
+  height: 60%;
+  width: 45%;
   overflow-y: scroll;
   border-radius: 12px;
+  padding-bottom: 25px;
+
 }
 
 .edit-details-modal-close.add{
@@ -29,12 +31,14 @@
   padding-bottom: 10px;
   padding-left: 25px;
   margin-bottom: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif  ;
 }
 
 // Form
 .edit-form-modal.add{
   .MuiFormControl-root{
     width: 100%;
+
   }
 
   h4 {
@@ -50,22 +54,28 @@
     padding: 0 25px;
     padding-bottom: 25px;
     margin-top:10px;
+
+
   }
 
   .edit-form-sets-reps.add {
     display: flex;
+
   }
 
    .edit-form-sets.add{
     padding-right: 10px;
+
   }
 
   .edit-form-button.add, .edit-form-error.add {
     margin-left:25px;
+
   }
 
   .edit-form-button.add, .edit-form-error.add {
     margin-left:25px;
+
   }
 
   .edit-form-button.success{
@@ -79,6 +89,7 @@
     transition: opacity 10s ease; /* Ensure transition is applied here too */
     margin: 0;
     padding: 0;
+
   }
   
   span.show {
@@ -91,6 +102,8 @@
   .edit-form-error.add{
     font-style: italic;
     color: red;
+    margin-top: 10px;
+    font-weight: bold;
   }
 
 }
