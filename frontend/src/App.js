@@ -25,10 +25,6 @@ const router = createBrowserRouter([
     element: <Logout />
   },  
   {
-    path: "/about",
-    element: <About />
-  },
-  {
     element: <Layout />,
     children: [
       {
@@ -44,8 +40,8 @@ const router = createBrowserRouter([
          element: <ExerciseModal />
       },
       {
-        path: "/faq",
-        element: <FAQ />
+        path: "/about",
+        element: <About />
       },
 
     ]
