@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-const useAbout = () => {
+const useAboutEmail = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -23,4 +23,4 @@ const useAbout = () => {
   }
 }
 
-export default useAbout;
+export default useAboutEmail;

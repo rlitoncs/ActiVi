@@ -1,5 +1,5 @@
 import '../../styles/pages/About.scss';
-import useAbout from '../../hooks/useAbout';
+import useAboutEmail from '../../hooks/useAboutEmail';
 
 const About = () => {
 
@@ -8,7 +8,7 @@ const About = () => {
     handleSubmit,
     email,
     submitted,
-  } = useAbout();
+  } = useAboutEmail();
 
   return (
     <div className='about-container'>
@@ -60,7 +60,7 @@ const About = () => {
 
 
             {submitted ? (
-              <p className="thank-you-message">Thank you for signing up!</p>
+              <p className="thank-you-message">Thank you for signing up!🎉</p>
             ) : (
               <form onSubmit={handleSubmit} className="email-signup">
                 <input
