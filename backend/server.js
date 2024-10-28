@@ -22,16 +22,19 @@ app.use(cookieSession({
 }))
 
 
+
+
 // Prep Routes
 const exampleRoute = require('./routes/example');
 const userWorkoutsApiRoutes = require('./routes/user-workouts-api');
 const exercisesApiRoutes = require('./routes/exercises-api');
+const usersApiRoutes = require('./routes/users-api')
 
 // Mount Routes
 app.use('/example', exampleRoute);
 app.use('/api/userWorkouts', userWorkoutsApiRoutes);
 app.use('/api/exercises', exercisesApiRoutes);
-
+app.use('/api/users', usersApiRoutes )
 
 
 app.listen(PORT, () => {
