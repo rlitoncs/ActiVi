@@ -1,8 +1,4 @@
 import '../../styles/pages/About.scss';
-import '../../styles/navigation/Layout.scss';
-import '../../styles/navigation/Logo.scss';
-import '../../styles/navigation/MenuList.scss';
-import Sidebar from '../navigation/Sidebar';
 
 const About = () => {
   return (
@@ -38,10 +34,10 @@ const About = () => {
         </div>
 
         <br />
-        <label htmlFor='goal'>What is your goal?</label>
+        <label className='about-label' htmlFor='goal'>What is your goal?</label>
 
         <div className='goal-selection'>
-          <select id='goal' name='goal'>
+          <select className='about-select' id='goal' name='goal'>
             <option value='lose-weight'>Lose Weight</option>
             <option value='build-muscle'>Build Muscle</option>
             <option value='increase-flexibility'>Increase Flexibility</option>
