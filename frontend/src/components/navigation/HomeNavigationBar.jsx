@@ -20,10 +20,6 @@ const HomeNavigationBar = () => {
               <li>
                 <Link to="/about"><button className="home__about__item">About</button></Link>
               </li>
-              <li>
-                <Link to="/contact"><button className="home__contact__item">Contact</button></Link>
-              </li>
-
             </ul>
           </div>
           <div>
