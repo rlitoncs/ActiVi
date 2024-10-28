@@ -1,6 +1,15 @@
 import '../../styles/pages/About.scss';
+import useAbout from '../../hooks/useAbout';
 
 const About = () => {
+
+  const {
+    handleEmailChange,
+    handleSubmit,
+    email,
+    submitted,
+  } = useAbout();
+
   return (
     <div className='about-container'>
       <div className='about-content'>
@@ -35,8 +44,8 @@ const About = () => {
 
         <br />
         <label className='about-label' htmlFor='goal'>What is your goal?</label>
-
         <div className='goal-selection'>
+
           <select className='about-select' id='goal' name='goal'>
             <option value='lose-weight'>Lose Weight</option>
             <option value='build-muscle'>Build Muscle</option>
@@ -44,23 +53,31 @@ const About = () => {
             <option value='improve-endurance'>Improve Endurance</option>
             <option value='stay-active'>Stay Active</option>
           </select>
+
           <button type='submit' className='submit-button'>
             Submit
           </button>
 
-          <div className='email-signup'>
-            <input
-              type='email'
-              placeholder='Enter your email'
-              className='email-input'
-            />
-            <button type='submit' className='submit-button'>
-              Sign Up
-            </button>
+
+            {submitted ? (
+              <p className="thank-you-message">Thank you for signing up!</p>
+            ) : (
+              <form onSubmit={handleSubmit} className="email-signup">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={handleEmailChange}
+                  className="email-input"
+                  required
+                />
+                <button type="submit" className="submit-button">Sign Up</button>
+              </form>
+            )}
+
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
