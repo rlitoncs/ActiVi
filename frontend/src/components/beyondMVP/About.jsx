@@ -7,10 +7,6 @@ import Sidebar from '../navigation/Sidebar';
 const About = () => {
   return (
     <div className='about-container'>
-      <div className='image-sidebar'>
-        <Sidebar />
-      </div>
-
       <div className='about-content'>
         <div className='text-and-image'>
           <div className='text-content'>
