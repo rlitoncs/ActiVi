@@ -15,10 +15,12 @@ const AddModalWorkout = ({workout, status, closeAddWorkout, handleChange,
       <div className="edit-details-modal-close add" onClick={closeAddWorkout}>
         <CloseIcon />
       </div>
-      
+
       <div className="edit-title-modal add">
         {workout.exercise_name}
       </div>
+      
+      <div class="workout-list-muscle-group">{workout.muscle_group}</div>
 
       <div className="edit-form-modal add">
           <form onSubmit={handleSubmit}>

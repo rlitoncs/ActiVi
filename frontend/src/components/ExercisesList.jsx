@@ -139,6 +139,7 @@ const ExerciseList = ({addWorkout}) => {
             src={exercise.photo_url}
             alt={exercise.exercise_name}
             addWorkout={addWorkout}
+            musclegroup={exercise.muscle_group}
             dateQuery={dateQuery}
           />
           )
