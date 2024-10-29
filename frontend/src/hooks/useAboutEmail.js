@@ -1,9 +1,8 @@
 import { useState } from 'react';
 
-
 const useAboutEmail = () => {
   const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -11,15 +10,14 @@ const useAboutEmail = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-
+    setEmailSubmitted(true);
   }
 
   return {
     handleEmailChange,
     handleSubmit,
     email,
-    submitted,
+    emailSubmitted,
   }
 }
 

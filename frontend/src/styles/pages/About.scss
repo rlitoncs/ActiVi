@@ -92,7 +92,8 @@
 .goal-selection {
   display: flex;
   gap: 15px;
-  margin-left: 10%;
+  margin-left: 5%;
+
 }
 
 label.about-label {
@@ -110,15 +111,20 @@ select.about-select {
 }
 
 .thank-you-message {
-  font-size: 18px;
+
+  font-size: 14px;
   color: #28a745; 
   margin-top: 20px;
   margin-left: 15%;
+  font-weight: bold;
 }
 
 .goal-message {
-  font-size: 18px;
+
+  font-size: 14px;
   color: #28a745; 
   margin-top: 20px;
-  margin-left: 15%;
+  margin-left: 5%;
+  font-weight: bold;
+
 }
