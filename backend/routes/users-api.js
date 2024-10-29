@@ -1,4 +1,5 @@
 const express = require('express');
+const bcrypt = require('bcryptjs');
 const router = express.Router();
 const usersQueries = require('../db/queries/users');
 
@@ -21,8 +22,8 @@ router.post('/login', (req, res) => {
       return res.status(400).json({message:"invalid credentials"})
     }
 
-    const passwordMatch = data.password === password;
-    //const passwordMatch = bcrypt.compareSync(data.password, password)
+    //const passwordMatch = data.password === password;
+    const passwordMatch = bcrypt.compareSync(password, data.password)
     if(!passwordMatch) {
       return res.status(400).json({message:"invalid credentials"})
     }
