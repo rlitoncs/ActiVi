@@ -14,8 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "2.4.2": "^1.0.0",
-    "chalk": "^2.4.2",
-    "cookie-session": "^2.1.0",
+    "chalk": "^2.4.2",   
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "morgan": "^1.10.0",
