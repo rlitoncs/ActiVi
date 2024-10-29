@@ -4,6 +4,7 @@ import ExerciseListItem from './ExerciseListItem';
 import '../styles/ExercisesList.scss';
 import { FaBars, FaSearch } from "react-icons/fa";
 import { useCalendar } from '../providers/CalendarProvider';
+import Calendar from './Calendar';
 
 const ExerciseList = ({addWorkout}) => {
   const [exercises, setExercises] = useState([]);
@@ -81,8 +82,9 @@ const ExerciseList = ({addWorkout}) => {
           </img> 
         </div>
       <div className="search-content">
-        <div>
         <h2 className='exec'>Exercises</h2>  
+        <div className='exercise-calendar'>
+          <Calendar />
         </div>
         <form>
           <div className="search-container">
