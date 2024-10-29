@@ -1,17 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from "axios";
+
 
 const useExerciseModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedExercise, setSelectedExercise] = useState(null);
+  const [selectedExercise, setSelectedExercise] = useState('');
+  useEffect(() => {
+    if (isModalOpen)
+    {
+      axios.get(`/api/exercises/${selectedExercise}`)
+      
+        .then(response => {
+          console.log(response.data);
+          setSelectedExercise(response.data[0]);
+        })
+        .catch(error => {
+          console.log(error);
+        })
+    }
+    }, [isModalOpen])
 
-  const openModal = (exercise) => {
-    setSelectedExercise(exercise); // Set the clicked exercise as the selected exercise
-    setIsModalOpen(true); // Open the modal
+  const openModal = (exercise_id) => {
+    setIsModalOpen(!isModalOpen); // Open the modal
+    setSelectedExercise(exercise_id); // Set the clicked exercise as the selected exercise
   };
 
   const closeModal = () => {
-    setIsModalOpen(false); // Close the modal
-    setSelectedExercise(null); // Clear the selected exercise
+    setIsModalOpen(!isModalOpen); // Close the modal
+    
   };
 
   return {

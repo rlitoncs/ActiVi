@@ -7,7 +7,7 @@ import '../styles/ExerciseListItem.scss';
 const ExerciseListItem = (props) => {
 
   const handleClick = () => {
-    alert('Image clicked!'); 
+    props.openModalExercise(props.id)
   };
 
   const onAddClick = () => {
