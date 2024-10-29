@@ -1,3 +1,7 @@
+.home__activi__header{
+  position: relative;
+}
+
 .home__container{
   overflow-x: hidden;
 }
@@ -40,10 +44,11 @@
 
   .home__content__text{
     font-size: 1.5em;
-    width: 35%;
+    width: 100%;
     color:White;
     margin-top: 20px;
     font-weight:600;
+    max-width: 350px;
   }
 
   .home_learn_more_btn{
@@ -53,6 +58,7 @@
     color: white;
     margin-top: 20px;
     width: 25%;
+    min-width: 212px;
   }
 
   .home_learn_more_btn:hover{
@@ -367,9 +373,9 @@
 
 .s3__faq__header{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap:15px;
 
   .s3__title {
     font-size: 2.5em;
@@ -378,7 +384,6 @@
   margin-top: 100px;
   margin-bottom: 50px;
 }
-
 
 .s3__faq__gallery{
   display: flex;

@@ -263,7 +263,8 @@ const Home = () => {
     
           <div className="s3__faq">
             <div className="s3__faq__header">
-              <h1 className="s3__title"> Frequently Asked Questions <FaQuestionCircle /> </h1>
+              <h1 className="s3__title"> Frequently Asked Questions</h1>
+              <FaQuestionCircle className='s3__title'/>
             </div>
 
             <div className="s3__faq__gallery__wrap">
