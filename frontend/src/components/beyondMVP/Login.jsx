@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Login.scss';
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, Navigate } from "react-router-dom";
 
 
 
@@ -12,7 +12,7 @@ const Login = ({ onLogin }) => {
   // const [email, setEmail] = useState('');
   //const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
 
   const handleSubmit = async (e) => {
@@ -20,21 +20,20 @@ const Login = ({ onLogin }) => {
     e.preventDefault();
     console.log(e.target.elements)
     const {email,password} = e.target.elements;
-    onLogin(email.value, password.value);
+    onLogin(email.value, password.value)
+    .then(() => navigate('/dashboard'))
+    .catch((err) => {
+      console.log(err)
+      setError(err.response.data.message)
+    })
 
-    // For now, we're hardcoding a simple login check
-    //if (email === 'admin' && password === 'password') {
-    // onLogin(email);
-    //  navigate('/dashboard'); // Redirect to the dashboard after successful login
-    // } else {
-    //   //setError('Invalid email or password');
-    // }
+    
   };
   return (
     <div className="all">
       <div className="wrapper">
         <form onSubmit={handleSubmit}>
-          <h1>Login</h1>
+          <h1>Login</h1>          
           <div className="input-box">
             <input
               type="text"
@@ -49,6 +48,7 @@ const Login = ({ onLogin }) => {
               name="password"          
               required />
           </div>
+          {error && <span>{error}</span>}
           <button type="submit">Login</button>
           <hr style={{ width: '100%', height: '2px', backgroundColor: 'black' }} />
         </form>
