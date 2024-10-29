@@ -13,8 +13,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.post('/login', (req, res) => {
-  console.log(req.body);
+router.post('/login', (req, res) => {  
   const {email, password} = req.body;
   usersQueries.getByEmail(email)
   .then(data =>{ 
@@ -31,6 +30,10 @@ router.post('/login', (req, res) => {
     //const token = jwt.sign(data,'mySecret')
     
     res.json({message:"welcome", data});   
+  })
+  .catch((err)=>{
+    console.log(err)
+    return res.status(500).json({message:'server error', error: err.message})
   })  
 })
 
