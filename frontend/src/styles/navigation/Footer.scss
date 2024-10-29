@@ -17,8 +17,17 @@
 .footer__footer__ {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items:center;
   flex: 1 1;
+}
+
+.footer__footer__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 20px;
 }
 
 .footer__logo{
@@ -45,13 +54,51 @@
 }
 
 .footer__footer__email{
-  align-content: center;
-  padding-right: 50px;
+  display: flex;
+  gap: 25%;
+  padding-left: 50px;
+  padding-top: 20px;
+  flex: 2 1;
+
+  hr{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 80%;
+    color: #EB8C34;
+  }
+
+  a{
+    text-decoration: none;
+    color: #777777;
+    font-size: 15px;
+  }
+
+  a:hover{
+    color: #424242
+  }
 }
 
-.footer__footer__email{
-  flex: 2 1;
+
+.footer-products-title{
+  font-weight: 600;
 }
+
+
+.footer-products, .footer-resources, .footer-service{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;  
+  list-style: none;
+  padding:0;
+
+  li {
+    margin-top: 10px;
+  }
+}
+
+
+
+
 
 .footer__form{
   display: flex;
