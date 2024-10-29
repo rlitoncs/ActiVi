@@ -2,7 +2,6 @@ import '../../styles/navigation/MenuList.scss'
 import Logo from './Logo';
 import { useNavigate } from "react-router-dom";
 import { Menu, Layout, Button } from "antd";
-import { HomeOutlined, AppstoreOutlined} from "@ant-design/icons/lib/icons";
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
@@ -30,9 +29,7 @@ const MenuList = ({collapsed, setCollapsed}) => {
       <Menu.Item className={"exercise-menu-item"} key="/account/exercises" icon={<FitnessCenterIcon/>} title="Fitness" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}> {!collapsed && "Exercises"}</Menu.Item>
       <Menu.Item className={"about-menu-item"} key="/account/about" icon={<GridViewOutlinedIcon/>} title="About" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}>{!collapsed && "About"}</Menu.Item>
       <Menu.Item className={"logout-menu-item"} key="/logout" icon={<LogoutIcon/>} title="Logout" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}>{!collapsed && "Logout"}</Menu.Item>
-      
     </Menu>
-
   )
 }
 
