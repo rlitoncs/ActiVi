@@ -70,47 +70,65 @@ const ExerciseList = ({addWorkout}) => {
   const dateQuery = date.year + "-" + date.month + "-" + date.day;
 
   return (
-    <div >
-      <form>
-        <div className="search-container">
-          <FaBars className="left-icon" />
-          <input
-            type="text"
-            placeholder="Hinted search text"
-            value={searchTerm}
-            onChange={handleSearchInputChange}
-            className="search-input"
-          />
-          <FaSearch className="right-icon" />
+    <div>
+        <div className="exercise__image__container">
+          <span>ActiVi Your Workouts</span> 
+          <p>Find the Right Exercise For You</p>
+          <img 
+            src="https://images.unsplash.com/photo-1571019613914-85f342c6a11e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            style={{width: "100%", height: "634px", objectFit:"cover", objectPosition: "center 23%"}}
+            >
+          </img> 
         </div>
-      </form>
-      
-      <div className="dropdown">
-        <label htmlFor="exercise-type-select" className="dropdown-label">
-          Exercise Type
-          <span className="dropdown-arrow">&#9662;</span>
-        </label>
-        <select id="exercise-type-select" onChange={exerciseTypeChange} className="hidden-select">
-          <option value="All">All</option>
-          <option value="Cardio">Cardio</option>
-          <option value="Strength">Strength</option>
-        </select>
+      <div className="search-content">
+        <div>
+        <h2 className='exec'>Exercises</h2>  
+        </div>
+        <form>
+          <div className="search-container">
+            <FaBars className="left-icon" />
+            <input
+              type="text"
+              placeholder="Hinted search text"
+              value={searchTerm}
+              onChange={handleSearchInputChange}
+              className="search-input"
+            />
+            <FaSearch className="right-icon" />
+          </div>
+        </form>
+
+        <div className="search-filters">
+          <div className="dropdown">
+            <label htmlFor="exercise-type-select" className="dropdown-label">
+              Exercise Type
+              <span className="dropdown-arrow">&#9662;</span>
+            </label>
+            <select id="exercise-type-select" onChange={exerciseTypeChange} className="hidden-select">
+              <option value="All">All</option>
+              <option value="Cardio">Cardio</option>
+              <option value="Strength">Strength</option>
+            </select>
+          </div>
+          <div className="dropdown">
+            <label htmlFor="exercise-type-select" className="dropdown-label">
+              Muscles Group
+              <span className="dropdown-arrow">&#9662;</span>
+            </label>
+            <select id="exercise-type-select" onChange={musclesGroupChange} className="hidden-select">
+              <option value="All">All</option>
+              <option value="Abdominals">Abdominals</option>
+              <option value="Biceps">Biceps</option>
+              <option value="Calves">Calves</option>
+              <option value="Chest">Chest</option>
+              <option value="Quadriceps">Quadriceps</option>
+              <option value="Shoulders">Shoulders</option>
+            </select>
+          </div>
       </div>
-      <div className="dropdown">
-        <label htmlFor="exercise-type-select" className="dropdown-label">
-          Muscles Group
-          <span className="dropdown-arrow">&#9662;</span>
-        </label>
-        <select id="exercise-type-select" onChange={musclesGroupChange} className="hidden-select">
-          <option value="All">All</option>
-          <option value="Abdominals">Abdominals</option>
-          <option value="Biceps">Biceps</option>
-          <option value="Calves">Calves</option>
-          <option value="Chest">Chest</option>
-          <option value="Quadriceps">Quadriceps</option>
-          <option value="Shoulders">Shoulders</option>
-        </select>
-      </div>
+
+        </div>
+        
       <div className='exercise-list__main'>
         {filteredExercises.map(exercise => {
           return (<ExerciseListItem

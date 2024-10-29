@@ -10,9 +10,6 @@ const Exercises = () => {
   
   return(
     <div className='exercise-main'>     
-      <div>
-       <h2 className='exec'>Exercises</h2>  
-      </div>
       
       <ExercisesList addWorkout={addWorkout} />
       {displayModal &&
