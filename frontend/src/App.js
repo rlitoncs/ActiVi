@@ -18,11 +18,11 @@ const App = () => {
 
   const handleLogin = (email, password) => {    
     console.log(email, password);
-    axios.post('/api/users/login', {email, password})
-    .then(response => {
-      console.log(response.data);
-      localStorage.setItem('token',JSON.stringify(response.data.data))
-      setCurrentUser(response.data.data);
+    return axios.post('/api/users/login', {email, password})
+    .then(response => response.data.data)
+    .then(token => {      
+      localStorage.setItem('token',JSON.stringify(token))
+      setCurrentUser(token);
     });
   
   }
