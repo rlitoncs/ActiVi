@@ -17,15 +17,15 @@ const ExerciseListItem = (props) => {
   return(
     <div className="exercise-list__item">
       <div className='card-content'>
+        <span className="exercise-list__name">{props.alt}</span>     
         
       <img 
-        style={{objectFit: "stretch", objectPosition: "top"}}
+        style={{objectFit: "cover", objectPosition: "top"}}
         className="exercise-list__image"
         id={props.id}
-        src={props.src}
-        alt={props.alt}        
+        src={props.src}    
         onClick={handleClick}      
-      />     
+      />
       <ImageButton className='add-button' onClick={onAddClick} />
       </div>
       
