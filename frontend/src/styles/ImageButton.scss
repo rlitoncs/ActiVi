@@ -9,10 +9,15 @@
   right: 10px; 
 }
 
+.plus-icon:hover{
+  color: #af6015 ;
+  transition: color 0.5s ease;
+}
+
 .plus-icon {
-  color: orange; 
+  color: #EB8C34; 
   font-size: 36px;
   line-height: 38px;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;  
 }
