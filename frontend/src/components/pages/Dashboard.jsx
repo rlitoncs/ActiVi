@@ -16,6 +16,9 @@ const Dashboard = () => {
 
   return(
     <div className='dashboard-container'>
+      <div className="home__image__container">
+        
+      </div>
       <div className='section-header-calendar'>
         <h1> Welcome Back, Name</h1>
         <Calendar />
