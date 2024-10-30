@@ -7,11 +7,11 @@ import '../styles/ExerciseListItem.scss';
 const ExerciseListItem = (props) => {
 
   const handleClick = () => {
-    alert('Image clicked!'); 
+    props.openModalExercise(props)
   };
 
   const onAddClick = () => {
-    props.addWorkout({exercise_id: props.id, exercise_name: props.alt, dateQuery: props.dateQuery});
+    props.addWorkout({exercise_id: props.id, exercise_name: props.alt, muscle_group: props.musclegroup, dateQuery: props.dateQuery});
   }
 
   return(

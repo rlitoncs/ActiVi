@@ -28,10 +28,22 @@
   color: #EB8C34;
   font-size: 36px;
   padding-top: 25px;
-  padding-bottom: 10px;
   padding-left: 25px;
-  margin-bottom: 20px;
   font-family:Verdana, Geneva, Tahoma, sans-serif  ;
+}
+
+
+// Muscle Group
+.workout-list-muscle-group{
+  display: inline-block; //will make border wrap around text
+  background-color: rgb(110, 160, 246);
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin: 5px 0;
+  color: white;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  
 }
 
 // Form

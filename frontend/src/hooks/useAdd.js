@@ -81,7 +81,7 @@ const useAdd = () => {
 
           closeAddWorkout()
         }, 2000)
-      }, 2000)
+      }, 1000)
     }
 
   }
