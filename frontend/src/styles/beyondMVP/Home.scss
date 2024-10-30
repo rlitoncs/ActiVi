@@ -11,9 +11,9 @@
   position: relative; 
   
 
-  img {
+  img, video {
     width: 100%;
-    height: 634px; 
+    height: 750px; 
     object-fit: cover;
   }
 
@@ -22,17 +22,24 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 99%;
     background-color: #000000;
-    opacity: 0.4;
+    opacity: 0.2;
     z-index: 1; // Place the overlay above the image but below the text
+  }
+}
+
+.home__activi__header.show{
+  .home__content__title{
+    color: #EB8C34;
+    transition: color 15s ease;
   }
 }
 
 .home__content__container{
   position: absolute;
   z-index: 2;
-  top: 13%;         /* Centers the text vertically */
+  top: 20%;         /* Centers the text vertically */
   left: 25%;        /* Centers the text horizontally */
   margin: auto;
 

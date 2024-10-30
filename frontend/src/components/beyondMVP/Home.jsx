@@ -109,14 +109,12 @@ const Home = () => {
 
   return (
     <div className="home__container">
-      <section className="home__activi__header">
+      <section className="home__activi__header" ref={setRefs}>
         <div className="home__image__container">
-          <picture>
-            <img 
-              src="https://images.unsplash.com/photo-1618355281342-d7d7569ab0f8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              >
-            </img>
-          </picture>
+        <video autoPlay muted loop>
+          <source src="/videos/activi.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
           <div className="overlay"></div> {/* Overlay div */}
         </div>
 
