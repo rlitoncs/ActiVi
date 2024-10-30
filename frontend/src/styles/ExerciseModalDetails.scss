@@ -28,29 +28,34 @@
   color: #EB8C34;
   font-size: 36px;
   padding-top: 25px;
-  padding-left: 25px;
+  padding-left: 50px;
   font-family:Verdana, Geneva, Tahoma, sans-serif  ;
 }
 
-.workout-list-muscle-group{
-  display: inline-block; //will make border wrap around text
-  background-color: rgb(110, 160, 246);
-  border-radius: 10px;
-  padding: 2px 8px;
-  margin: 5px 0;
-  color: white;
-  margin-left: 25px;
-  margin-bottom: 20px;
+.exercise-details-modal{
+
+  div.workout-list-muscle-group{
+    display: inline-block; //will make border wrap around text
+    background-color: rgb(110, 160, 246);
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin: 5px 0;
+    color: white;
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
 }
 
 
 .workout-tutorial-video {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
-  height: 75%;
+  align-items: center;
+  flex-direction: column;
+  // padding-top: 20px;
+  // // height: 75%;
   
-  video{
+  video, .workout-disclaimer{
     width: 80%;
     max-width: 1280px;
     max-height: 720px;
@@ -59,13 +64,18 @@
 
 }
 
+.workout-disclaimer {
+  font-style:italic;
+  color: #b7b3b3
+}
+
 .workout-title-description, .workout-title-equipment {
   font-size: 24px;
 }
 
 .workout-details{
   padding-top: 10px;
-  padding-left: 25px;
+  padding-left: 50px;
   width: 90%;
 
 }
