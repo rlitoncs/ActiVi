@@ -1,5 +1,78 @@
+.dashboard-container{
+  margin-bottom: 200px;
+}
+
 .section-header-calendar, .section-workouts-title, .section-workouts-list {
   margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
+}
+
+.dashboard__image__container{
+  width: 100%;
+  position: relative;
+
+  img.dashboard__hero {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+  }
+
+  .user-avatar-container{
+    max-width: 1000px;
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      object-fit: cover;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+    }
+  }
+
+  .user-details{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 10px;
+
+    .user-details-height,
+    .user-details-age,
+    .user-details-weight {
+      position: relative;
+      border: 1px solid white;
+      border-radius: 30px;
+      padding: 10px;
+      margin-top: 10px;
+      background: #EB8C34;
+      color: white;
+      width: 150px;
+      padding-bottom:12px;
+    }
+
+    .user-height, .user-age, .user-weight{
+      position: absolute;
+      top:0;
+      left:0;
+      font-size: 12px;
+      padding-left: 15px;
+      padding-top: 2px;
+    }
+
+    .user-detail{
+      padding-top: 3px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+    
+  }
 }
