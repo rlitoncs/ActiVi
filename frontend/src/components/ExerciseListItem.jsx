@@ -7,7 +7,7 @@ import '../styles/ExerciseListItem.scss';
 const ExerciseListItem = (props) => {
 
   const handleClick = () => {
-    props.openModalExercise(props.id)
+    props.openModalExercise(props)
   };
 
   const onAddClick = () => {

@@ -10,7 +10,7 @@ const Exercises = () => {
   const { displayModal, workout, status, addWorkout, closeAddWorkout, handleChange,
     handleSubmit } = useAdd();
 
-  const { isModalOpen, openModal, closeModal, selectedExercise } = useExerciseModal();
+  const { isModalOpen, openModal, closeModal, selectedExercise, exercise } = useExerciseModal();
   
   return(
     <div className='exercise-main'>     
@@ -21,7 +21,7 @@ const Exercises = () => {
       }
 
       {isModalOpen &&
-        <ExerciseModalDetails selectedExercise={selectedExercise}  closeModal={closeModal}/>
+        <ExerciseModalDetails selectedExercise={selectedExercise} exercise={exercise} addWorkout={addWorkout} closeModal={closeModal}/>
       }
     </div>
   );
