@@ -12,6 +12,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 // Middleware
+app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(express.json());  // axios by default sends data as JSON
 app.use(express.urlencoded({ extended: true })) //parse complex URLencoded data 
