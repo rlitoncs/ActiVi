@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const userWorkoutsQueries = require('../db/queries/userWorkouts');
-const { route } = require('./example');
 
 // GET /api/userWorkouts/[:date]
 router.get('/:date', (req, res) => {
