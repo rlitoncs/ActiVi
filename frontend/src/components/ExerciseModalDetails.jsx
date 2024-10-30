@@ -1,10 +1,35 @@
 import '../styles/ExerciseModalDetails.scss'
 import CloseIcon from '@mui/icons-material/Close';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useRef, useState } from 'react';
 
-const ExerciseModalDetails = ({selectedExercise, closeModal}) => {
-  console.log(selectedExercise);
+const ExerciseModalDetails = ({selectedExercise, exercise, addWorkout, closeModal}) => {
+  const ref = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if(ref.current && !ref.current.contains(event.target)){
+      closeModal();
+    }
+  }
+
+  const handleAddExercise = () => {
+    addWorkout({exercise_id: exercise.id, exercise_name: exercise.alt, muscle_group: exercise.musclegroup, dateQuery: exercise.dateQuery})
+    closeModal();
+  }
+
+  useEffect(() => {
+    // Add event listener on mount
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Cleanup the event listener on unmount
+    return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+    };
+}, []);
+
   return (
-    <div className="exercise-details-modal">
+    <div className="exercise-details-modal" ref={ref}>
 
       <div className="exercise-details-modal-close" onClick={closeModal}>
         <CloseIcon />
@@ -12,6 +37,9 @@ const ExerciseModalDetails = ({selectedExercise, closeModal}) => {
 
       <div className="exercise-title-modal">
         {selectedExercise.exercise_name}
+        <button className="exercise_btn_add" onClick={handleAddExercise} >
+          <FontAwesomeIcon icon={faCirclePlus} className="plus-icon" />
+        </button>
       </div>
       
       <div className="workout-list-muscle-group" >{selectedExercise.muscle_group}</div>

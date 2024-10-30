@@ -5,6 +5,8 @@ import axios from "axios";
 const useExerciseModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedExercise, setSelectedExercise] = useState('');
+  const [exercise, setExercise] = useState({});
+
   useEffect(() => {
     if (isModalOpen)
     {
@@ -20,9 +22,10 @@ const useExerciseModal = () => {
     }
     }, [isModalOpen])
 
-  const openModal = (exercise_id) => {
+  const openModal = (exercise) => {
     setIsModalOpen(!isModalOpen); // Open the modal
-    setSelectedExercise(exercise_id); // Set the clicked exercise as the selected exercise
+    setSelectedExercise(exercise.id); // Set the clicked exercise as the selected exercise
+    setExercise(exercise);
   };
 
   const closeModal = () => {
@@ -33,6 +36,7 @@ const useExerciseModal = () => {
   return {
     isModalOpen, // modal state
     selectedExercise, // selected exercise
+    exercise,
     openModal, // function to open the modal
     closeModal, // function to close the modal
   };

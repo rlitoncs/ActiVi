@@ -1,5 +1,5 @@
 import '../styles/AddEditModalWorkout.scss';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import TextField from '@mui/material/TextField';
 import CloseIcon from '@mui/icons-material/Close';
@@ -8,9 +8,28 @@ import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
 
 const AddModalWorkout = ({workout, status, closeAddWorkout, handleChange,
   handleSubmit}) => {
+    const ref = useRef(null);
+  
+    const handleClickOutside = (event) => {
+      if(ref.current && !ref.current.contains(event.target)){
+        closeAddWorkout();
+      }
+    }
+  
+    useEffect(() => {
+      // Add event listener on mount
+      document.addEventListener('mousedown', handleClickOutside);
+  
+      // Cleanup the event listener on unmount
+      return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+      };
+  }, []);
+
+
   
   return (
-    <div className="edit-details-modal add">
+    <div className="edit-details-modal add" ref={ref}>
 
       <div className="edit-details-modal-close add" onClick={closeAddWorkout}>
         <CloseIcon />
