@@ -13,5 +13,15 @@ router.get('/', (req, res) => {
     })
 })
 
+// GET /api/exercises/:id
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  exercisesQueries.getExerciseIdData(id)
+    .then(data => {
+      res.json(data);
+    })
+})
+
 
 module.exports = router; 
