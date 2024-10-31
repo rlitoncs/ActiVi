@@ -32,7 +32,8 @@
 .home__activi__header.show{
   .home__content__title{
     color: #EB8C34;
-    transition: color 15s ease;
+    transition: color 10s ease, text-shadow 10s ease;
+    text-shadow: -1px 2px 1px white;
   }
 }
 
@@ -47,6 +48,7 @@
     color: white;
     font-size: 8em;
     font-weight:600;
+    text-shadow: -1px 2px 1px rgba(0, 0, 0, 0)
   }
 
   .home__content__text{
@@ -60,6 +62,7 @@
 
   .home_learn_more_btn{
     background: #EB8C34;
+    border: white 1px solid;
     border-radius: 4px;
     padding: 10px 24px;
     color: white;
