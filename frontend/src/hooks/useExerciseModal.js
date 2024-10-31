@@ -7,29 +7,31 @@ const useExerciseModal = () => {
   const [selectedExercise, setSelectedExercise] = useState('');
   const [exercise, setExercise] = useState({});
 
+  console.log(selectedExercise);
+
   useEffect(() => {
     if (isModalOpen)
     {
       axios.get(`/api/exercises/${selectedExercise}`)
       
         .then(response => {
-          console.log(response.data);
           setSelectedExercise(response.data[0]);
         })
         .catch(error => {
           console.log(error);
         })
     }
-    }, [isModalOpen])
+    }, [isModalOpen, exercise])
 
   const openModal = (exercise) => {
-    setIsModalOpen(!isModalOpen); // Open the modal
+    setIsModalOpen(true); // Open the modal
     setSelectedExercise(exercise.id); // Set the clicked exercise as the selected exercise
     setExercise(exercise);
   };
 
   const closeModal = () => {
-    setIsModalOpen(!isModalOpen); // Close the modal
+    setIsModalOpen(false); // Close the modal
+    setSelectedExercise('');
     
   };
 
