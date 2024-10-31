@@ -6,7 +6,7 @@ import { useCalendar } from "../providers/CalendarProvider";
 import TotalWorkouts from "./TotalWorkouts";
 
 
-const WorkoutList = ({editWorkout, deleteWorkout, submit, submitDelete}) => {
+const WorkoutList = ({userID, editWorkout, deleteWorkout, submit, submitDelete}) => {
   const { selectedDate } = useCalendar(); 
   const [workouts, setWorkouts] = useState({ userWorkouts: [], totalWorkouts: 0 });
 
@@ -19,7 +19,7 @@ const WorkoutList = ({editWorkout, deleteWorkout, submit, submitDelete}) => {
   const dateQuery = date.year + "-" + date.month + "-" + date.day;
 
   useEffect(() => {
-    axios.get(`/api/userWorkouts/${dateQuery}`)
+    axios.get(`/api/userWorkouts/${userID}/${dateQuery}`)
       .then(response => {
         setWorkouts(response.data); // data comes back as { userWorkouts[{}], totalWorkouts[{}] }
       })

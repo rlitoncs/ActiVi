@@ -9,7 +9,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 
-const ExerciseModalDetails = ({selectedExercise, exercise, addWorkout, openModal, closeModal}) => {
+const ExerciseModalDetails = ({userID, selectedExercise, exercise, addWorkout, openModal, closeModal}) => {
   const [loading, setLoading] = useState(false);
   const [exercises, setExercises] = useState({});
   const { selectedDate } = useCalendar(); 
@@ -44,7 +44,7 @@ const ExerciseModalDetails = ({selectedExercise, exercise, addWorkout, openModal
   //Helper Functions
   
   const handleAddExercise = () => {
-    addWorkout({id: exercise.id, exercise_id: exercise.id, exercise_name: exercise.exercise_name, muscle_group: exercise.muscle_group, dateQuery: dateQuery})
+    addWorkout({id: exercise.id, exercise_id: exercise.id, exercise_name: exercise.exercise_name, muscle_group: exercise.muscle_group, dateQuery: dateQuery, user_id: userID})
     closeModal();
   }
   

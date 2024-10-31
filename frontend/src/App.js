@@ -63,11 +63,11 @@ const App = () => {
         },
         {
           path: "/account/exercises",
-          element: currentUser ? <Exercises /> : <Navigate to="/login" />,
+          element: currentUser ? <Exercises userID={userID}/> : <Navigate to="/login" />,
         },
         {
           path: "/account/about",
-          element:  currentUser ? <About /> : <Navigate to="/login" />
+          element:  currentUser ? <About userID={userID}/> : <Navigate to="/login" />
         }
       ]
     }

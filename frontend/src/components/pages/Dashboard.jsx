@@ -79,7 +79,7 @@ const Dashboard = ({userID}) => {
       </div>
 
       <div className='section-workouts-list'>
-        <WorkoutList editWorkout={editWorkout} deleteWorkout={deleteWorkout} submit={submit} submitDelete={submitDelete}/>
+        <WorkoutList userID={userID} editWorkout={editWorkout} deleteWorkout={deleteWorkout} submit={submit} submitDelete={submitDelete}/>
         {displayModal &&
           <EditModalWorkout workout={workout} status={status} closeEditWorkout={closeEditWorkout} handleChange={handleChange} handleSubmit={handleSubmit}/>
         }
