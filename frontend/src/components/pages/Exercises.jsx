@@ -17,11 +17,11 @@ const Exercises = () => {
       
       <ExercisesList addWorkout={addWorkout} openModalExercise={openModal} />
       {displayModal &&
-        <AddModalWorkout workout={workout} status={status} closeAddWorkout={closeAddWorkout} handleChange={handleChange} handleSubmit={handleSubmit}/>
+        <AddModalWorkout workout={workout} status={status} closeAddWorkout={closeAddWorkout} handleChange={handleChange} handleSubmit={handleSubmit} openModal={openModal}/>
       }
 
       {isModalOpen &&
-        <ExerciseModalDetails selectedExercise={selectedExercise} exercise={exercise} addWorkout={addWorkout} closeModal={closeModal}/>
+        <ExerciseModalDetails selectedExercise={selectedExercise} exercise={exercise} addWorkout={addWorkout} openModal={openModal} closeModal={closeModal}/>
       }
     </div>
   );
