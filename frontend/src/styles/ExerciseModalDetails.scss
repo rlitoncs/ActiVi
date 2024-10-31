@@ -70,6 +70,35 @@
 
 }
 
+.exercise-video{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+}
+
+#backBtn, #nextBtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+
+  .MuiSvgIcon-root{
+    background:#EB8C34;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 36px;
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .MuiSvgIcon-root:hover {
+    background-color:#ba702b;
+    transition: background-color 0.5s ease;
+  }
+}
+
+
 .workout-disclaimer {
   font-style:italic;
   color: #b7b3b3

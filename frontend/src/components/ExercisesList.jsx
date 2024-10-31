@@ -3,7 +3,6 @@ import axios from 'axios';
 import ExerciseListItem from './ExerciseListItem';
 import '../styles/ExercisesList.scss';
 import { FaBars, FaSearch } from "react-icons/fa";
-import { useCalendar } from '../providers/CalendarProvider';
 import Calendar from './Calendar';
 
 const ExerciseList = ({addWorkout, openModalExercise}) => {
@@ -60,15 +59,6 @@ const ExerciseList = ({addWorkout, openModalExercise}) => {
   }, [searchTerm, selectedMuscle, selectedType ])
 
   // logic for the Exercise Type and Muscles Group dropdown.
-    
-  const { selectedDate } = useCalendar(); 
-  const date = {
-    year: selectedDate["$y"],
-    month: Number(selectedDate["$M"] + 1).toString(),
-    day: selectedDate["$D"]
-  }
-
-  const dateQuery = date.year + "-" + date.month + "-" + date.day;
 
   return (
     <div>
@@ -137,10 +127,9 @@ const ExerciseList = ({addWorkout, openModalExercise}) => {
             key={exercise.id}
             id={exercise.id}
             src={exercise.photo_url}
-            alt={exercise.exercise_name}
+            exercise_name={exercise.exercise_name}
             addWorkout={addWorkout}
-            musclegroup={exercise.muscle_group}
-            dateQuery={dateQuery}
+            muscle_group={exercise.muscle_group}
             openModalExercise={openModalExercise}
           />
           )
