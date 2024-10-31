@@ -5,29 +5,32 @@ import TextField from '@mui/material/TextField';
 import CloseIcon from '@mui/icons-material/Close';
 import CircularProgress from '@mui/material/CircularProgress';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
+import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 
-const AddModalWorkout = ({workout, status, closeAddWorkout, handleChange,
+const AddModalWorkout = ({openModal, workout, status, closeAddWorkout, handleChange,
   handleSubmit}) => {
     const ref = useRef(null);
+    
+      useEffect(() => {
+        // Add event listener on mount
+        document.addEventListener('mousedown', handleClickOutside);
+    
+        // Cleanup the event listener on unmount
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
   
     const handleClickOutside = (event) => {
       if(ref.current && !ref.current.contains(event.target)){
         closeAddWorkout();
       }
     }
-  
-    useEffect(() => {
-      // Add event listener on mount
-      document.addEventListener('mousedown', handleClickOutside);
-  
-      // Cleanup the event listener on unmount
-      return () => {
-          document.removeEventListener('mousedown', handleClickOutside);
-      };
-  }, []);
 
+    const handleGoBack = () => {
+      openModal(workout);
+    }
 
-  
   return (
     <div className="edit-details-modal add" ref={ref}>
 
@@ -35,10 +38,15 @@ const AddModalWorkout = ({workout, status, closeAddWorkout, handleChange,
         <CloseIcon />
       </div>
 
+
       <div className="edit-title-modal add">
-        {workout.exercise_name}
+        <div className="go-back">
+          <p> <ArrowBackOutlinedIcon onClick={handleGoBack}/> </p> 
+        </div>
+        <div>
+          {workout.exercise_name}
+        </div>
       </div>
-      
       <div class="workout-list-muscle-group">{workout.muscle_group}</div>
 
       <div className="edit-form-modal add">
