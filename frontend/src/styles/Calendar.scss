@@ -5,3 +5,35 @@
     height: 40px;
   }
 }
+
+.calendar-prev, .calendar-next {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: none;
+  border: none;
+  // margin: 0 10px;
+
+  .MuiSvgIcon-root{
+    padding: 8px;
+    font-size: 36px;
+    color: #707070;
+  }
+  .MuiSvgIcon-root:hover {
+    background: #F5F5F5;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    padding: 8px;
+  }
+}
+
+// .calendar-prev:hover, .calendar-next:hover {
+//   background: #e3e1e1;
+//   border-radius: 25%;
+//   transition: background-color 0.5s ease;
+// }
+
+.calendar-container{
+  display:flex;
+  // justify-content: center;
+}
