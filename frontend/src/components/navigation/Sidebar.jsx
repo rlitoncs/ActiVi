@@ -4,7 +4,7 @@ import { Layout } from 'antd';
 
 const { Sider } = Layout;
 
-const Sidebar = () => {
+const Sidebar = ({handleLogout}) => {
   const [collapsed, setCollapsed ] = useToggle(false);
 
   return (
@@ -15,7 +15,7 @@ const Sidebar = () => {
           collapsible
           trigger={null}
         >
-        <MenuList collapsed={collapsed} setCollapsed={setCollapsed} />
+        <MenuList collapsed={collapsed} setCollapsed={setCollapsed} handleLogout={handleLogout}/>
         </Sider>
       </Layout>
     </nav>    

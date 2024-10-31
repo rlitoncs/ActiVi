@@ -1,12 +1,9 @@
 // load .env data into process.env
-require('dotenv').config(); 
-
+require('dotenv').config();
 
 // Web server config
 const express = require('express');
 const morgan = require('morgan');
-const cookieSession = require('cookie-session');
-
 
 const app = express();
 const PORT = process.env.PORT;
@@ -16,12 +13,6 @@ app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(express.json());  // axios by default sends data as JSON
 app.use(express.urlencoded({ extended: true })) //parse complex URLencoded data 
-app.use(cookieSession({
-  name: 'projectSession',
-  keys:['key'],
-  maxAge: 24 * 60 * 60 * 1000 // 24 hours
-}))
-
 
 // Prep Routes
 const exampleRoute = require('./routes/example');
