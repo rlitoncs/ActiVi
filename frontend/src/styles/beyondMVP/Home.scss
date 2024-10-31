@@ -451,17 +451,20 @@
   // margin: 10% auto;
 }
 
-#backBtn, #nextBtn {
-  cursor: pointer;
-  margin: 40px;
-  padding: 5px;
-  border-radius: 40px;
-  background: #EB8C34;
-}
-
-#backBtn:hover, #nextBtn:hover{
-  background: #c26813;
-  transition: background-color 0.5s ease;
+.s3__faq__gallery__wrap{
+  #backBtn, #nextBtn {
+    cursor: pointer;
+    margin: 40px;
+    padding: 5px;
+    border-radius: 40px;
+    background: #EB8C34;
+    color: white;
+  }
+  
+  #backBtn:hover, #nextBtn:hover{
+    background: #c26813;
+    transition: background-color 0.5s ease;
+  }
 }
 
 
