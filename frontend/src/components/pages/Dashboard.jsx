@@ -22,6 +22,11 @@ const Dashboard = ({userID}) => {
       })
   }, [])
 
+  useEffect(() => {
+    document.title = "My Dashboard | ActiVi";
+  }, []); 
+
+
 
 
   const { displayModal, workout, status, submit, editWorkout, closeEditWorkout, handleChange,

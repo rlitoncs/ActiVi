@@ -79,6 +79,10 @@ const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    document.title = "ActiVi";
+  }, []); 
+
   // -----------------------------------------------
   const refs = useRef([]);
 

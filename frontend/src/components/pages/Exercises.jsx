@@ -4,6 +4,7 @@ import ExerciseModalDetails from '../ExerciseModalDetails';
 import AddModalWorkout from '../AddModalWorkout';
 import useExerciseModal from '../../hooks/useExerciseModal';
 import useAdd from '../../hooks/useAdd';
+import { useEffect } from "react";
 
 const Exercises = ({userID}) => {
 
@@ -12,6 +13,11 @@ const Exercises = ({userID}) => {
 
   const { isModalOpen, openModal, closeModal, selectedExercise, exercise } = useExerciseModal();
   
+    
+  useEffect(() => {
+    document.title = "Exercises | ActiVi";
+  }, []); 
+
   return(
     <div className='exercise-main'>     
       
