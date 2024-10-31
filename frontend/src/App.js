@@ -4,14 +4,11 @@ import Logout from './components/beyondMVP/Logout';
 import Layout from './components/navigation/Layout';
 import Exercises from './components/pages/Exercises';
 import Dashboard from './components/pages/Dashboard';
-import FAQ from './components/beyondMVP/FAQ';
+import About from './components/beyondMVP/About';
+import ExerciseModal from './components/pages/ExerciseModal';
+import axios from 'axios';
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
-import axios from 'axios';
-
-
-
-
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('token')) || null);
@@ -57,8 +54,8 @@ const App = () => {
           element: currentUser ? <Exercises /> : <Navigate to="/login" />,
         },
         {
-          path: "/faq",
-          element:  currentUser ? <FAQ /> : <Navigate to="/login" />
+          path: "/about",
+          element:  currentUser ? <About /> : <Navigate to="/login" />
         }
       ]
     }

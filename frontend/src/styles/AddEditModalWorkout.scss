@@ -23,15 +23,46 @@
   }
 }
 
+.go-back{
+  .MuiSvgIcon-root {
+      margin-top: 10px;
+      display:inline-block;
+      cursor:pointer;
+      background: #EB8C34;
+      border-radius: 12px;
+      margin-right: 10px;
+      color:white;
+    }
+    .MuiSvgIcon-root:hover {
+      background-color:#ba702b;
+      transition: background-color 0.5s ease;
+    }
+}
+
+
 // Title
 .edit-title-modal.add {
+  display: flex;
+  align-items: center;
   color: #EB8C34;
   font-size: 36px;
   padding-top: 25px;
-  padding-bottom: 10px;
   padding-left: 25px;
-  margin-bottom: 20px;
   font-family:Verdana, Geneva, Tahoma, sans-serif  ;
+}
+
+
+// Muscle Group
+.workout-list-muscle-group{
+  display: inline-block; //will make border wrap around text
+  background-color: rgb(110, 160, 246);
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin: 5px 0;
+  color: white;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  
 }
 
 // Form

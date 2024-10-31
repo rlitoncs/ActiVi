@@ -38,4 +38,16 @@ router.post('/login', (req, res) => {
   })  
 })
 
+
+// GET /api/users/[:id]
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  usersQueries.getUserInfo(id)
+    .then(data => {
+      res.json(data);
+    })
+  
+})
+
+
 module.exports = router; 

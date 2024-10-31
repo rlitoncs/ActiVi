@@ -6,6 +6,13 @@ const getAll = () => {
       return data.rows;
     });
 };
+const getUserInfo = (id) => {
+  return db.query('SELECT first_name, last_name, age, weight, height, profile_pic FROM users WHERE id=$1;', [id])
+    .then(data => {
+      return data.rows;
+    });
+};
+
 
 const getByEmail = (email) => {
   return db.query('SELECT * FROM users WHERE email = $1;',[email])
@@ -15,4 +22,4 @@ const getByEmail = (email) => {
     });
 };
 
-module.exports = { getAll, getByEmail};
+module.exports = { getAll, getUserInfo, getByEmail};

@@ -20,6 +20,8 @@ const EditModalWorkout = ({workout, status, closeEditWorkout, handleChange,
         {workout.exercise_name}
       </div>
 
+      <div class="workout-list-muscle-group">{workout.muscle_group}</div>
+
       <div className="edit-form-modal add">
           <form onSubmit={handleSubmit}>
             <h4> Sets / Reps </h4>

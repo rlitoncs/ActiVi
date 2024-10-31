@@ -1,0 +1,116 @@
+// Modal Container
+.exercise-details-modal{
+  background-color: white;
+  box-shadow: 0 0 0 50vmax rgba(0,0,0,.5);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  height: 80%;
+  width: 60%;
+  overflow-y: scroll;
+  border-radius: 12px;
+  padding-bottom: 25px;
+  z-index: 1;
+
+}
+
+.exercise-details-modal-close{
+  cursor:pointer;
+
+  .MuiSvgIcon-root{
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+.exercise-title-modal, .workout-title-description, .workout-title-equipment{
+  color: #EB8C34;
+  font-size: 36px;
+  padding-top: 25px;
+  padding-left: 50px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif  ;
+}
+
+.exercise_btn_add{
+  border: none;
+  background: none;
+  padding-left: 15px;
+}
+
+.exercise-details-modal{
+
+  div.workout-list-muscle-group{
+    display: inline-block; //will make border wrap around text
+    background-color: rgb(110, 160, 246);
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin: 5px 0;
+    color: white;
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.workout-tutorial-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // padding-top: 20px;
+  // // height: 75%;
+  
+  video, .workout-disclaimer{
+    width: 80%;
+    max-width: 1280px;
+    max-height: 720px;
+    border-radius: 12px;
+  }
+
+}
+
+.exercise-video{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+}
+
+#backBtn, #nextBtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2px;
+
+  .MuiSvgIcon-root{
+    background:#EB8C34;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 36px;
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .MuiSvgIcon-root:hover {
+    background-color:#ba702b;
+    transition: background-color 0.5s ease;
+  }
+}
+
+
+.workout-disclaimer {
+  font-style:italic;
+  color: #b7b3b3
+}
+
+.workout-title-description, .workout-title-equipment {
+  font-size: 24px;
+}
+
+.workout-details{
+  padding-top: 10px;
+  padding-left: 50px;
+  width: 90%;
+
+}
