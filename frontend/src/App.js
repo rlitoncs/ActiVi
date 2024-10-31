@@ -58,7 +58,7 @@ const App = () => {
         },
         {
           path: "/faq",
-          element: <FAQ />
+          element:  currentUser ? <FAQ /> : <Navigate to="/login" />
         }
       ]
     }
