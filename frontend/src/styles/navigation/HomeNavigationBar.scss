@@ -38,10 +38,12 @@ span.home__activi{
   margin: 0;
 }
 
-button{
-  padding: 26px 1.25rem;
-  background: transparent;
-  border: none;
+.home__logo__links{
+  button{
+    padding: 26px 1.25rem;
+    background: transparent;
+    border: none;
+  }
 }
 
 .home__button__item:hover, .home__about__item:hover, .home__contact__item:hover {
