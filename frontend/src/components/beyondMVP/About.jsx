@@ -33,13 +33,10 @@ const About = () => {
               overall wellness.
             </p>
           </div>
-          <img
-            className='journey-image'
-            src='https://plus.unsplash.com/premium_photo-1689962253303-df6f8fd16069?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBhdGh8ZW58MHx8MHx8fDA%3D'
-            alt='Fitness Journey'
-          />
-        </div>
-        <br />
+          <video controls width="250">
+            <source src="/Users/annhnatyshyn/lighthouse/ActiVi/frontend/src/providers/4695859-hd_1280_720_30fps.mp4" type="video/mp4" />
+          </video>
+          </div>
 
 
         <div className='goal-selection'>
