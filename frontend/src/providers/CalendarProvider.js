@@ -10,7 +10,6 @@ export const useCalendar = () => {
 
 const CalendarProvider = (props) => {
   const [selectedDate, setSelectedDate] = useState(dayjs());  
-  console.log(selectedDate);
 
   const value = {selectedDate, setSelectedDate};
 
