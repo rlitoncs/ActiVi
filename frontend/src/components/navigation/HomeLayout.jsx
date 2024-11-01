@@ -4,7 +4,7 @@ import Footer from './Footer';
 import { Outlet } from "react-router-dom";
 import { useEffect } from 'react';
 
-const HomeLayout = () => {
+const HomeLayout = (props) => {
   useEffect(() => {
     const body = document.body;
 
@@ -29,8 +29,9 @@ const HomeLayout = () => {
       <div className="home-nav-bar-container">
         <HomeNavigationBar />
       </div>
-      <div className="home-content-area-container">
+      <div className={props.children ? "home-content-error" :"home-content-area-container"}>
         <Outlet />
+        {props.children } {/*for errors*/}
       </div>
       <div className="footer-content-container">
         <Footer/>

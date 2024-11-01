@@ -6,6 +6,7 @@ import Layout from './components/navigation/Layout';
 import Exercises from './components/pages/Exercises';
 import Dashboard from './components/pages/Dashboard';
 import About from './components/beyondMVP/About';
+import Error from './components/pages/Error';
 import axios from 'axios';
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
@@ -35,6 +36,7 @@ const App = () => {
     {
       path: "/",
       element: <HomeLayout/>,
+      errorElement: <HomeLayout> <Error /> </HomeLayout>,
       children: [
         {
           path: "/",
