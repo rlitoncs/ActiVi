@@ -3,11 +3,11 @@ import CalendarProvider from '../../providers/CalendarProvider';
 import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
 
-const Layout = () => {
+const Layout = ({handleLogout}) => {
   return (
     <div className="main-container">
       <div className="sidebar">
-        <Sidebar />
+        <Sidebar handleLogout={handleLogout}/>
       </div>
       <div className="content-area">
         <CalendarProvider>

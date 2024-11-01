@@ -9,12 +9,11 @@ import useDelete from '../../hooks/useDelete';
 import EditModalWorkout from '../EditModalWorkout'
 import DeleteModalWorkout from '../DeleteModalWorkout';
 
-const Dashboard = () => {
+const Dashboard = ({userID}) => {
   const [user, setUser] = useState({});
-  console.log(user);
 
   useEffect(() => {
-    axios.get(`/api/users/1`)
+    axios.get(`/api/users/${userID}`)
       .then(response => {
         setUser(response.data[0])
       })
@@ -44,7 +43,7 @@ const Dashboard = () => {
 
         <div className="user-avatar-container">
           <img
-          src={"https://t3.ftcdn.net/jpg/04/97/66/28/360_F_497662812_7rGW6PMBJR9AbrKcGgN5S1luXYTjH92i.jpg"}
+          src={user.profile_pic}
           >
           </img>
           
