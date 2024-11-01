@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Login.scss';
 import axios from "axios";
 import { useNavigate, Link, Navigate } from "react-router-dom";
+import Logo from '../navigation/Logo';
 
 const Login = ({ onLogin }) => {
 
@@ -34,6 +35,7 @@ const Login = ({ onLogin }) => {
     <div className="all">
       <div className="wrapper">
         <form onSubmit={handleSubmit}>
+          <Link to="/" style={{textDecoration:'none'}}> <Logo /> </Link>
           <h1>Login</h1>          
           <div className="input-box">
             <input
