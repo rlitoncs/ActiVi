@@ -5,7 +5,7 @@ import '../styles/ExercisesList.scss';
 import { FaBars, FaSearch } from "react-icons/fa";
 import Calendar from './Calendar';
 
-const ExerciseList = ({addWorkout, openModalExercise}) => {
+const ExerciseList = ({userID, addWorkout, openModalExercise}) => {
   const [exercises, setExercises] = useState([]);
   const [selectedType, setSelectedType] = useState('All');
   const [selectedMuscle, setSelectedMuscle] = useState('All');
@@ -131,6 +131,7 @@ const ExerciseList = ({addWorkout, openModalExercise}) => {
             addWorkout={addWorkout}
             muscle_group={exercise.muscle_group}
             openModalExercise={openModalExercise}
+            userID={userID}
           />
           )
         })}

@@ -1,21 +1,21 @@
 const db = require('../connection');
 
-const getUserWorkoutDatawithTotal = (selected_date) => {
+const getUserWorkoutDatawithTotal = (userID, selected_date) => {
   // First query: Get user workout data
   const userWorkoutDataQuery = db.query(`
     SELECT user_workouts.id, duration, calories_burned, is_completed, sets, reps, weight, exercise_id, exercises.exercise_name, exercises.muscle_group 
     FROM user_workouts 
     JOIN exercises ON exercise_id = exercises.id 
-    WHERE user_id = 1 AND date='${selected_date}' 
+    WHERE user_id = $1 AND date = $2
     ORDER BY id;
-  `);
+  `, [userID, selected_date]);
 
   // Second query: Get the total count of workouts
   const totalUserWorkoutsQuery = db.query(`
     SELECT COUNT(*)
     FROM user_workouts 
-    WHERE user_id = 1 AND date='${selected_date}';
-  `);
+    WHERE user_id = $1 AND date = $2;
+  `, [userID, selected_date]);
 
   return Promise.all([userWorkoutDataQuery, totalUserWorkoutsQuery])
     .then(([workoutData, totalWorkoutsData]) => {
@@ -32,6 +32,7 @@ const getUserWorkoutDatawithTotal = (selected_date) => {
 const addUserWorkoutData = (userWorkout) => {
   const dateOfWorkout = userWorkout.dateQuery.split('-'); 
   const [year, month, day] = dateOfWorkout;
+  const userID = userWorkout.user_id
 
 
   return db.query(`
@@ -39,7 +40,7 @@ const addUserWorkoutData = (userWorkout) => {
       (date, duration, calories_burned, is_completed, sets, reps, weight, exercise_id, user_id)
       VALUES
       ($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
-      [`${year}, ${month}, ${day}`, userWorkout.duration, userWorkout.calories_burned, false, userWorkout.sets, userWorkout.reps, userWorkout.weight, userWorkout.exercise_id, 1]
+      [`${year}, ${month}, ${day}`, userWorkout.duration, userWorkout.calories_burned, false, userWorkout.sets, userWorkout.reps, userWorkout.weight, userWorkout.exercise_id, userID]
     )
   
 }

@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const userWorkoutsQueries = require('../db/queries/userWorkouts');
 
-// GET /api/userWorkouts/[:date]
-router.get('/:date', (req, res) => {
-  const { date } = req.params;
+// GET /api/userWorkouts/[:id]/[:date]
+router.get('/:userID/:date', (req, res) => {
+  const { userID, date } = req.params;
 
-  userWorkoutsQueries.getUserWorkoutDatawithTotal(date) //requires argument selected_date
+  userWorkoutsQueries.getUserWorkoutDatawithTotal(userID, date) //requires argument selected_date
     .then(data => {
       res.json(data);
     })

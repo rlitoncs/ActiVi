@@ -1,9 +1,12 @@
 import './App.css';
+import HomeLayout from './components/navigation/HomeLayout';
+import Home from './components/beyondMVP/Home';
 import Login from './components/beyondMVP/Login';
 import Layout from './components/navigation/Layout';
 import Exercises from './components/pages/Exercises';
 import Dashboard from './components/pages/Dashboard';
 import About from './components/beyondMVP/About';
+import Error from './components/pages/Error';
 import axios from 'axios';
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
@@ -32,11 +35,22 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <h1> hello from root page </h1>
-    },
+      element: <HomeLayout/>,
+      errorElement: <HomeLayout> <Error /> </HomeLayout>,
+      children: [
+        {
+          path: "/",
+          element: <Home />
+        },
+        {
+          path: "/about",
+          element: <About />
+        },
+      ] 
+    }, 
     {
       path: "/login",
-      element: currentUser ? <Navigate to="/dashboard" /> : <Login onLogin={handleLogin}  />
+      element: currentUser ? <Navigate to="/account/dashboard" /> : <Login onLogin={handleLogin}  />
     },
     {
       path: "/logout",
@@ -46,16 +60,16 @@ const App = () => {
       element: <Layout  handleLogout = {handleLogout}/>,
       children: [
         {
-          path: "/dashboard",
+          path: "/account/dashboard",
           element: currentUser? <Dashboard userID={userID}/> : <Navigate to="/login" />
         },
         {
-          path: "/exercises",
-          element: currentUser ? <Exercises /> : <Navigate to="/login" />,
+          path: "/account/exercises",
+          element: currentUser ? <Exercises userID={userID}/> : <Navigate to="/login" />,
         },
         {
-          path: "/about",
-          element:  currentUser ? <About /> : <Navigate to="/login" />
+          path: "/account/about",
+          element:  currentUser ? <About userID={userID}/> : <Navigate to="/login" />
         }
       ]
     }
