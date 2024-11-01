@@ -1,12 +1,17 @@
 import '../../styles/pages/About.scss';
 import useAboutEmail from '../../hooks/useAboutEmail';
 import useAboutGoal from '../../hooks/useAboutGoal';
+import { useEffect } from 'react';
 
 const About = () => {
   const { handleEmailChange, handleSubmit, email, emailSubmitted } =
     useAboutEmail();
   const { handleGoalClick, handleGoalChange, goalMessage, goalSubmitted } =
     useAboutGoal();
+
+  useEffect(() => {
+    document.title = "About Us | ActiVi";
+  }, []); 
 
   return (
     <div className='about-container'>

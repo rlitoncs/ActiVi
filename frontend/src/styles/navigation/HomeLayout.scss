@@ -1,0 +1,22 @@
+.home-container{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-nav-bar-container{
+  display: flex;
+  justify-content: center;
+  background: #EB8C34;
+}
+
+.home-content-error{
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:auto;
+}
+
+.footer-content-container{
+  margin-top: auto;
+}

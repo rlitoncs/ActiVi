@@ -20,7 +20,7 @@ const ExerciseListItem = (props) => {
   };
 
   const onAddClick = () => {
-    props.addWorkout({id: props.id, exercise_id: props.id, exercise_name: props.exercise_name, muscle_group: props.muscle_group, dateQuery: dateQuery});
+    props.addWorkout({id: props.id, exercise_id: props.id, exercise_name: props.exercise_name, muscle_group: props.muscle_group, dateQuery: dateQuery, user_id: props.userID});
   }
 
   return(

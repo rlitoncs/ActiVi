@@ -3,16 +3,17 @@ import './Login.scss';
 import axios from "axios";
 import { useNavigate, Link, Navigate } from "react-router-dom";
 
-
-
-
-
 const Login = ({ onLogin }) => {
 
   // const [email, setEmail] = useState('');
   //const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "ActiVi | Login";
+  }, []); 
+
 
 
   const handleSubmit = async (e) => {
@@ -21,7 +22,7 @@ const Login = ({ onLogin }) => {
     console.log(e.target.elements)
     const {email,password} = e.target.elements;
     onLogin(email.value, password.value)
-    .then(() => navigate('/dashboard'))
+    .then(() => navigate('/account/dashboard'))
     .catch((err) => {
       console.log(err)
       setError(err.response.data.message)

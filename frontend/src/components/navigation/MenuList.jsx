@@ -26,13 +26,12 @@ const MenuList = ({collapsed, setCollapsed, handleLogout}) => {
           />
       </Layout> 
       <Link to="/" style={{textDecoration:"none"}}> <Logo />  </Link> 
-      <Menu.Item onClick={()=> navigate('/dashboard')} className={"dashboard-menu-item"} key="/dashboard" icon={<HomeOutlinedIcon style={{fontSize: "30px"}}/>} title="Dashboard" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}> {!collapsed && "Dashboard"}</Menu.Item>
-      <Menu.Item onClick={()=> navigate('/exercises')} className={"exercise-menu-item"} key="/exercises" icon={<FitnessCenterIcon/>} title="Fitness" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}> {!collapsed && "Exercises"}</Menu.Item>
-      <Menu.Item onClick={()=> navigate('/about')} className={"about-menu-item"} key="/about" icon={<GridViewOutlinedIcon/>} title="About" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}>{!collapsed && "About"}</Menu.Item>
+      <Menu.Item onClick={()=> navigate('/account/dashboard')} className={"dashboard-menu-item"} key="/dashboard" icon={<HomeOutlinedIcon style={{fontSize: "30px"}}/>} title="Dashboard" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}> {!collapsed && "Dashboard"}</Menu.Item>
+      <Menu.Item onClick={()=> navigate('/account/exercises')} className={"exercise-menu-item"} key="/exercises" icon={<FitnessCenterIcon/>} title="Fitness" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}> {!collapsed && "Exercises"}</Menu.Item>
+      <Menu.Item onClick={()=> navigate('/account/about')} className={"about-menu-item"} key="/about" icon={<GridViewOutlinedIcon/>} title="About" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}>{!collapsed && "About"}</Menu.Item>
       <Menu.Item onClick={handleLogout} className={"logout-menu-item"} key="/logout" icon={<LogoutIcon/>} title="Logout" style={{paddingTop: !collapsed ? "40px" : "20px", paddingBottom: !collapsed ? "30px" : "20px"}}>{!collapsed && "Logout"}</Menu.Item>
       
     </Menu>
-
   )
 }
 
