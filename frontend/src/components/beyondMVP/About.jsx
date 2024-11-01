@@ -24,27 +24,24 @@ const About = () => {
             and committed to a healthier lifestyle.
           </p>
           <br />
-          <div className='bottomParagraph'>
-            <p>
-              We’re here to support you every step of the way, empowering you to
-              achieve your best self with workouts tailored to your goals,
-              whether it's building strength, improving endurance, or enhancing
-              overall wellness.
-            </p>
-            <br />
-          </div>
+
+          <p>
+            We’re here to support you every step of the way, empowering you to
+            achieve your best self with workouts tailored to your goals, whether
+            it's building strength, improving endurance, or enhancing overall
+            wellness.
+          </p>
+          <br />
         </div>
 
         <div class='video'>
           <iframe
-            width='750'
-            height='700'
-            src='https://www.youtube.com/embed/89yP76HLtjc?autoplay=1&playlist=89yP76HLtjc&loop=1&controls=0&modestbranding=1&add=1'
+            width='500'
+            height='500'
+            src='https://www.youtube.com/embed/89yP76HLtjc?autoplay=1&playlist=89yP76HLtjc&loop=1&controls=0&modestbranding=1'
             title='YouTube video player'
-            controls
             frameborder='0'
-            controlslist='nofullscreen nodownload noremoteplayback noplaybackrate foobar'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            allow='autoplay; encrypted-media'
             referrerpolicy='strict-origin-when-cross-origin'
             allowfullscreen
           ></iframe>
