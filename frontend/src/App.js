@@ -48,7 +48,7 @@ const App = () => {
     }, 
     {
       path: "/login",
-      element: currentUser ? <Navigate to="/dashboard" /> : <Login onLogin={handleLogin}  />
+      element: currentUser ? <Navigate to="/account/dashboard" /> : <Login onLogin={handleLogin}  />
     },
     {
       path: "/logout",
