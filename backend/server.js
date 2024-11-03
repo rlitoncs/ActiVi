@@ -4,9 +4,15 @@ require('dotenv').config();
 // Web server config
 const express = require('express');
 const morgan = require('morgan');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT;
+
+const cwd = process.cwd(); 
+const public = path.join(cwd, "..", "public");
+app.use("/", express.static(public));
+
 
 // Middleware
 app.use(express.static('public'));

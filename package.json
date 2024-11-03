@@ -1,0 +1,26 @@
+{
+  "name": "activi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "build:frontend": "cd frontend && npm run build",
+    "deploy:frontend": "mkdir -p ./public && mv -f frontend/build/* ./public",
+    "install": "(npm run install:backend) && (npm run install:frontend)",
+    "build": "(npm install) && (npm run build:frontend) && (npm run deploy:frontend)",
+    "start": "(cd backend && npm start);"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlitoncs/ActiVi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rlitoncs/ActiVi/issues"
+  },
+  "homepage": "https://github.com/rlitoncs/ActiVi#readme"
+}
