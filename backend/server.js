@@ -33,6 +33,10 @@ app.use('/api/exercises', exercisesApiRoutes);
 app.use('/api/users', usersApiRoutes);
 
 
+// Unknown Routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(cwd, "..", "public", "index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`app is listening on ${PORT}`)
