@@ -2,10 +2,9 @@
 
 ActiVi is a fitness application  developed with React, Node.js, Express, and PostgresSQL, that allows users to select and log their workouts for the day.
 
-Click here to visit ![ActiVi](https://activi.onrender.com/)!
-
 ### Getting Started
-- Visit the link and login with:
+- Click here to visit ActiVi: https://activi.onrender.com
+- Login with:
   - Email: **j.stuart@gmail.com**
   - Password: **12345**
 
