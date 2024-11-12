@@ -4,6 +4,11 @@ ActiVi is a fitness application  developed with React, Node.js, Express, and Pos
 
 Click here to visit ![ActiVi](https://activi.onrender.com/)!
 
+### Getting Started
+- Visit the link and login with:
+  - Email: **j.stuart@gmail.com**
+  - Password: **12345**
+
 ### Dashboard Page
 !["View of Dashboard Page"](https://github.com/rlitoncs/ActiVi/blob/main/docs/Dashboard-Page.JPG?raw=true)
 
