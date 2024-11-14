@@ -14,6 +14,11 @@ ActiVi is a fitness application  developed with React, Node.js, Express, and Pos
 ### Exercise Page
 !["View of Exercise Page"](https://github.com/rlitoncs/ActiVi/blob/main/docs/Exercises-Page.JPG?raw=true)
 
+### Exercise Modal
+!["View of Exercise Modal"](https://github.com/rlitoncs/ActiVi/blob/main/docs/Exercise-Modal.JPG?raw=true)
+
+### Exercise Submission
+!["View of Exercise Submission"](https://github.com/rlitoncs/ActiVi/blob/main/docs/Exercise-Added.JPG?raw=true)
 
 ### About Page
 !["View of About Page"](https://github.com/rlitoncs/ActiVi/blob/main/docs/About-Page.JPG?raw=true)
